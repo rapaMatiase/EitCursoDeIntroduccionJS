@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 3
+        let b = 4
+
+        //SUMA
+        //Lo ideal es craer una variale
+        let resultadoSuma = a + b
+        //Depues lo muestro o lo que sea
+        console.log(resultadoSuma)
+
+        //MALA PRACTICA O COSA FEA
+        console.log(a+b)
+        /* Esto es mala practica porque como no estoy guardando el valor en memoria no puedo utilizarlo para seguir trabajando despues y no queda tan claro el codigo de porque no estyo sumando a y b. */
+
+        let resultadoResta = a - b
+        let resultadoMultiplacacion = a * b
+        let resultadoDivision = a / b 
+        console.log(resultadoDivision)
+        //Division tieen un particualridad en javascript.
+        let divisionPorCero = 1 / 0
+        console.log(divisionPorCero)
+
+        //Resto 
+        let resultadoResto = a % b
+        console.log(resultadoResto)
+    </script>
+</body>
+</html>
