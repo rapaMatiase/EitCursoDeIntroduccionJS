@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* EJERCICIO 6 */
+
+        /* 
+        1) Solicitar al usuario el ingreso de uan contraseña por PROMT
+        2) Determinar la cantidad de caracteres de la contraseña ingresada
+        3) Realizar la operacion de relacion necesaria para determinar si la contraseña ingresda tiene 7 o mas caracteres y guardar en una variable.
+        4) Realizar otra operacion de relacion que sea necesaria para determinar si la contraseña ingresada teien 9 o menos caracteres, y guardar en otra variable.
+        5) Mostrar en pantalla un mensaje con los resultados del paso 3 y 4 por separado.
+        11.40Am 3min
+        */
+        //1
+        let password = prompt("Ingrese una constraseña")
+        //2
+        let cantidadDeCaracteres = password.length
+        //3
+        let cumpleConElMinimo = cantidadDeCaracteres >= 7
+        //4
+        let cumpleConElMaximo = cantidadDeCaracteres <= 9
+        //5
+        alert(`minimo : ${cumpleConElMinimo}, maximo : ${cumpleConElMaximo}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* EJERCICIO 5 */
+
+        /* Repaso rapido:*/
+        let variableDeTexto = "Hola"
+        let cantidadDeCaracteres2 = variableDeTexto.length // Me devuelve la cantidad de caracteres.
+
+        /* 
+        1) Solicitar al usuario el ingreso de uan contraseña por PROMT
+        2) Determinar la cantidad de caracteres de la contraseña ingresada
+        3) Si la contraseña ingresada tiene 7 o mas caracteres mostrar true en pantalla. Si no false.
+        11.32Am 3min
+        */
+       //1
+        let password = prompt("Ingrese una constraseña")
+        //2
+        let cantidadDeCaracteres = password.length
+        //3
+        let cumpleConElMinimo = cantidadDeCaracteres >= 7
+        //4
+        alert(cumpleConElMinimo)
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeroUnoIngresado = prompt("Ingrese un numemro")
+        let numeroDosIngresado = prompt("Ingrese otro numero")
+
+        //TEXTO -> NUMERO
+        let numeroUnoConvertido = parseInt(numeroUnoIngresado)
+        let numeroDosConvertido = parseInt(numeroDosIngresado)
+        //NaN -> No Allow Number (Resultado de una sintaxis valida pero con una semantica herrada en los valores a operar).
+        //NaN es un valor del tipo numerico. 
+
+        let resultado = numeroUnoConvertido + numeroDosConvertido
+
+        alert(resultado)
+
+        /* NOTA  */
+
+        //Esto funciona, pero es mala practica
+        let solicitarNumero = parseInt(prompt('ingrese su nombre'));
+        //Porque en una linea, intento resolver dos problemas.
+
+        /* 
+        Problema 1 : Mas dificil encontrar errores.
+        Problema 2 : No es escalable, no puedo agregar codigo entre una funcion y otra. Por ejemplo, validar el ingreso antes de convertirlo.
+        */
+    </script>
+</body>
+</html>
