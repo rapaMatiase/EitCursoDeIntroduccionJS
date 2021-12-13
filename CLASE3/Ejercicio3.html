@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        Ejercicio 3
+        Solicitar al usuario su edad y determinar si puede votar ;
+        - Si tiene menos de 16 años no puede votar.
+        - Si tiene 16 o 17 años puede votar, pero no es obligatorio.
+        - Si tene 18 años o mas, puede votar y es obligatorio.
+        - Si tiene 70 años o mas, puede votar y no es obligatorio.
+        3min 10.52AM
+        */
+        
+        //Solicito la edad al usuario
+        let edadIngresada = prompt("Ingrse su edad")
+        //La convierto a valor numerico
+        let edadConvertida = parseInt(edadIngresada)
+        //Resuelvo el probelma
+        if(edadConvertida < 16){
+            alert("No podes votar")
+            //16 <= edadConvertida && edadConvertida <= 17
+        }else if(edadConvertidad == 16 || edadConvertida == 17){
+            alert("Podes votar y no es obligatorio")
+        }else if(18 <= edadConvertida && edadConvertida < 70){
+            alert("Podes voatr y es obligatorio")
+        }else if(70 <= edadConvertida){
+            alert("Podes votar pero no es olbigatorio.")
+        }
+</script>
+</body>
+</html>
