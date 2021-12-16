@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Realizar un programa que solicite un numero al usuario (le cremos al usurio que siempre ingresa un valor convertible y mayor que 10), y muestre en pantalla la sumatoria del 1 al numero ingresado.
+        2min 11.12 */
+
+        let numeroIngresado = prompt("Ingrese un numero")
+        let numeroConvertido = parseInt(numeroIngresado)
+
+        let sumatoria = 0
+        for(let i = 1; i <= numeroConvertido; i++){
+            sumatoria += i
+        }
+        console.log(sumatoria)
+    </script>
+</body>
+</html>

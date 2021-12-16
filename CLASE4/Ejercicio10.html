@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* Realizar un programa que solicite al usuario ingresar un numero positivo mayor que 10, y muestre en pantalla el resultado de hacer la sumatoria de 1 a el numero ingresado. 
+        Controalr que le ingreso es convertible a numero y que el mismo es mayor que 10.
+        2min 11.17AN
+        ejericio 10 = ejercico8 + ejercicio9.
+        COPIAR EL CODIGO, NO VOLVER A HACER. PENSAR COMO JUNTARLOS.
+         */
+        //Solicito el numero
+        let numeroIngresado = prompt("Ingrese un numero")
+        //Convierto
+        let numeroConvertido = parseInt(numeroIngresado)
+        //Compruebo si es o no convertible
+        let isNonNaN = !isNaN(numeroConvertido)
+
+        if (isNonNaN) {
+            if (10 < numeroConvertido) {
+                let sumatoria = 0
+                for (let i = 1; i <= numeroConvertido; i++) {
+                    sumatoria += i
+                }
+                console.log(sumatoria)
+            } else {
+                console.log("No podes ingresar un valor menor e igual que 10")
+            }
+        } else {
+            console.log("Error, no es convertible.")
+        }
+
+    </script>
+</body>
+
+</html>

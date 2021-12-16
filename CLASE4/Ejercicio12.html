@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Crear un programa que filtre de un string todas las a y c.
+        2min 11.41AM
+         */
+        let texto = "El Frente de Todos necesita todavía seis votos más para poder avanzar con la sesión en Diputados, que estaba prevista para el mediodía de hoy pero que se retrasará por las negociaciones políticas. Qué hará Juntos por el Cambio"
+        texto = texto.toLowerCase()
+        for (let i = 0; i < texto.length; i++) {
+            if (texto[i] != "c" && texto[i] != "a") {
+                console.log(texto[i])
+            }
+        }
+    </script>
+</body>
+
+</html>

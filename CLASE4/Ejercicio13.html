@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Realizar un programa que dado un texto lo invierta. 2min 11.47Am*/
+        let texto = "El Frente de Todos necesita todavía seis votos más para poder avanzar con la sesión en Diputados, que estaba prevista para el mediodía de hoy pero que se retrasará por las negociaciones políticas. Qué hará Juntos por el Cambio"
+        //"El frente" -> "etnerf le"
+
+        //Acumular pero recorriendo el string del final hasta el inicio.
+        let acumularo = ""
+        for(let i = texto.length - 1; 0 <= i; i--){
+            acumularo += texto[i]
+        }
+        console.log(acumularo)
+    </script>
+</body>
+</html>

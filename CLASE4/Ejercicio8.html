@@ -11,9 +11,28 @@
 
         /* Parte 1
             Realizar un programa que solicite al usuario ingresar un numero.
-            Si el
-        
+            -Si el valor no es convertible a numero, indicar error.
+            -Si el valor fue convertible a numero, tiene que ser positivo y mayor a 10. Si no indicar un error.
+            - Si es positivo y mayor a 10, indicar que es correcto. 
+            2min 11.03AM
         */
+        //Solicito el numero
+        let numeroIngresado = prompt("Ingrese un numero")
+        //Convierto
+        let numeroConvertido = parseInt(numeroIngresado)
+        //Compruebo si es o no convertible
+        let isNonNaN = !isNaN(numeroConvertido)
+
+        if(isNonNaN){
+            if(10 < numeroConvertido){
+                console.log("Todo okey")
+            }else{
+                console.log("No podes ingresar un valor menor e igual que 10")
+            }
+        }else{
+            console.log("Error, no es convertible.")
+        }
+
     </script>
 </body>
 </html>
