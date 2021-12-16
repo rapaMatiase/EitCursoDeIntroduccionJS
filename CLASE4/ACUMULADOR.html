@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let acumulador = 0 //Caso particular sumatoria
+        for(let i = 1; i <= 10; i++){
+            acumulador = acumulador + i
+            console.log(`i:${i}, acumulador:${acumulador}`)
+        }
+
+        let acumuladorString = ""
+        for(let i = 1; i<=10; i++){
+            acumuladorString = acumuladorString + "a"
+            console.log(`i:${i}, acumuladorString:${acumuladorString}`)
+
+        }
+
+        /* lo mas IMPORTANTE con un acumulador es igualar a un valor neutral para operacion a acumular.
+        - Si sumo o resto, el cero es le valor neutral. No importa cuantas veces restes o sumes 0, no modifica.
+        - Si multiplico o divido, el uno es el valor neutral. No importa cuantas veces dividas o multipleques 1, no mifica.
+        - Si concadeno, el string vacio "" es el valor neutral, que no es lo mimos que un null o undifind
+        */
+    </script>
+</body>
+</html>
