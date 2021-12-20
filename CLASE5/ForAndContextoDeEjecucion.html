@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* No puedo declara dos variables con el mismo nombre en un mismo contexto de ejecucion.
+        
+        - Un contexto global.
+        - Un contexto de bloque (IF, FOR, WHILE, DO WHILE entre sus {})
+        - Un funcion
+
+        */
+
+        // let nombre = "Matias"//Contexto global
+        // let apellido = "rapa"
+        // console.log(nombre)//Matias
+        // for(let i = 0; i < 3; i++){
+        //     let nombre = "Nicolas" //Contexto bloque del for
+        //     console.log(nombre)//Nicolas
+        //     console.log(apellido)
+        // }
+        // console.log(nombre) //Matias
+
+
+        var nombre = "Matias"//Contexto global
+        var apellido = "rapa"
+        console.log(nombre)//Matias
+        for(let i = 0; i < 3; i++){
+            var nombre = "Nicolas" //Contexto bloque del for
+            console.log(nombre)//Nicolas
+            console.log(apellido)
+        }
+        console.log(nombre) //Matia X Nicolas
+
+    </script>
+</body>
+</html>

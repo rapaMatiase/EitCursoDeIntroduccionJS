@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Queremso que se ejecute hasta que ;
+        - Gane un juegador
+        - Empate
+        */
+
+        let matrixTateti = [
+                ["-", "-", "-"],
+                ["-", "-", "-"],
+                ["-", "-", "-"]
+            ]
+
+        let juegador = "x"
+        do{
+
+            console.table(matrixTateti)
+
+            let coodI = prompt("Ingresa la posicon en I")
+            let coodIconvertida = parseInt(coodI)
+            let coodJ = prompt("Ingresa la posicon en J")
+            let coodJconvertida = parseInt(coodJ)
+
+            matrixTateti[coodIconvertida][coodJconvertida] = juegador
+            //Ya se que el jugador juego, entonces cambio
+            if(juegador == "x"){
+                juegador = "O"
+            }else{
+                juegador = "x"
+            }
+
+        }while(true)
+    </script>
+</body>
+</html>
