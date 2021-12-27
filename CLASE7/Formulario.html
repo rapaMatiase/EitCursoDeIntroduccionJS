@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nombre">
+    <button id="button"> Click me </button>
+    <script>
+        document.getElementById("button").addEventListener("click", function(){
+            //Solicito al render tree que me de el input para obtener lo ingresado
+            let elInput = document.getElementById("nombre")
+            //Value para extraer el valor del input
+            let nombreDelUsuario = elInput.value
+            alert(`Hola ${nombreDelUsuario}`)
+            
+        })
+    </script>
+</body>
+</html>

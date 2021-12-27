@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- La notacion de abajo donde hago enter y pongo un atributo debajo de otro es mala practica para HTML puro, pero es sumamente comun en REACTJS, PYTHON, VUEJS. -->
+
+    <!-- 
+
+        El evento puede estar definido desde
+        - El HTML como atricuto -> Todos arrancan con "on" en el nombre y el valor del atributo es javascript.
+        - El Javascript como addeventlisting. La lista de eventos es la misma pero se saca el "on".
+     -->
+    <div 
+        style="background-color: red; height: 200px; width: 200px;border: 2px solid black;"
+        onclick="Saludar()"
+    ></div>
+
+    <div 
+        id="mydiv" 
+        style="background-color: blue; height: 200px; width: 200px;border: 2px solid black;"
+    >
+
+    </div>
+    <script>
+        /* Lista de eventos ->> https://www.w3schools.com/jsref/dom_obj_event.asp */
+        function Saludar(){
+            alert("Hola")
+        }
+
+        /* El ID es un atributo que yo defino el valor dentro de pag y no se puede repetir o no se deberia. Si repite no tira error, simplemente el navegador devulve el primer elemento que en render tree que encuentra con ese id. */
+        
+        //Esto funciona pero no es la mejor forma de escribirlo
+        //document.getElementById("mydiv").addEventListener("click", Saludar)
+
+        //Se suele escribir asi
+        document.getElementById("mydiv").addEventListener("click", function(event){
+            Saludar()
+            console.log(event.target)//Target es la referencia al mismo elmento donde ocurrio el evento. Por me puede interesar sobre quien ocurrio. 
+        })
+
+
+    </script>
+</body>
+</html>

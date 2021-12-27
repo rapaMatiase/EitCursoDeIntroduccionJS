@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+        }
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div id="div" class="yellow" style=" height: 20px; width: 20px;"></div>
+
+    <script>
+        /* 
+        Pasar el uso de style a classList.
+        2min 12.07
+        */
+
+        let element = document.getElementById("div")
+
+        element.addEventListener("click", function(e){
+            //Deberia controlar con if si esta la clase YELLOW o BLUE, y removerla antes de agregar al RED.
+            e.target.classList.add("red")
+        })
+        element.addEventListener("dblclick", function(e){
+            //Lo mismo que el comentario de arriba pero con BLUE.
+            e.target.classList.add("blue")
+        })
+    </script>
+</body>
+</html>
