@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let sodokuMatrix = [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
+        ]
+
+        /* 
+        PASO 6
+        Utilizando las funciones exsisteRepetidoEnLaFila y existeRepetidoEnLaColumna crear la condicion logica necesaria para determinar si se termino el juego.
+        2min 11.38AM
+        */
+        function add(i, j) {
+            if (sodokuMatrix[i][j] == 3) {
+                sodokuMatrix[i][j] = 1
+            } else {
+                sodokuMatrix[i][j]++
+            }
+            
+            if(!existeRepetidosEnColumna() && !existeRepetidosEnFila() && !existePosicionesVacias()){
+                console.log("Juego terminado")
+            }
+            console.table(sodokuMatrix)
+
+        }
+
+        /* 
+        PASO 5
+        Crear una funcion que determine si queda alguna poscion vacia o sin jugar. (La matrix no contiene ningun 0).
+        2min 11.42
+        */
+
+
+        function existePosicionesVacias(){
+            let bandera = false
+            for (let i = 0; i < sodokuMatrix.length; i++) {
+                for (let j = 0; j < sodokuMatrix[i].length; j++) {
+                    if(sodokuMatrix[i][j] == 0){
+                        bandera = true
+                    }                    
+                }
+            }
+            return bandera
+        }
+        function existeRepetidosEnFila() {
+            let bandera = false
+            for (let i = 0; i < sodokuMatrix.length; i++) {
+                if ((sodokuMatrix[i][0] == sodokuMatrix[i][1] || sodokuMatrix[i][0] == sodokuMatrix[i][2] || sodokuMatrix[i][1] == sodokuMatrix[i][2]) && (sodokuMatrix[i][0] != 0 && sodokuMatrix[i][1] != 0 && sodokuMatrix[i][2] != 0)) {
+                    bandera = true
+                }
+            }
+            return bandera
+        }
+
+        function existeRepetidosEnColumna() {
+            let bandera = false
+            for (let j = 0; j < sodokuMatrix.length; j++) {
+                if ((sodokuMatrix[0][j] == sodokuMatrix[1][j] || sodokuMatrix[0][j] == sodokuMatrix[2][j] || sodokuMatrix[1][j] == sodokuMatrix[2][j]) && (sodokuMatrix[0][j] != 0 && sodokuMatrix[1][j] != 0 && sodokuMatrix[0][j] != 0)){
+                    bandera = true
+                }
+            }
+            return bandera
+        }
+
+    </script>
+</body>
+
+</html>
