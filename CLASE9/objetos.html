@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Represntamos un alumno */
+
+        //La clase dinamica, la permite instanciar varios objetos ;
+        // - clase (Lo vemos aparte)
+        // - funcion
+
+        
+        //Una instancia estatica (sin plantilla, no lo puedo recrear).
+
+        let objeto = {
+            //Todas las propiedades que utilizamos como "variables" la llamamos atributos.
+            nombre : "Matias",
+            apellido : "rapa",
+            email : "rapa.matias.e@gmail.com",
+            materiasInscripto : [
+                "Matematica",
+                "Lengua",
+                "Ingles"
+            ],
+            edad : 20,
+            estaHabilitado : true,
+            //Todas las propiedades que utilizamos como "funciones" la llamamos metodos o comportamiento.
+
+            materiasDondeEstaInscripto : function(){
+                //console.log(this)
+                console.log(this.materiasInscripto)
+
+                //console.log(objeto.materiasInscripto) Esto esta mal porque puede estar llamando un contexto externo al objeto. 
+                
+            },
+            esMayorDeEdad :  function() {
+                if(this.edad >= 18){
+                    return true
+                }else{
+                    return false 
+                }
+            },
+        }
+
+        console.log(objeto)
+
+        //Como veo el valor de un atributo de mi objeto?
+        console.log(objeto.email) //La mas utilizada
+        console.log(objeto["email"]) //Poco utilizada
+
+        //Como hago para modificar el valor de un atributo de un objeto?
+        objeto.nombre = "Ezequiel"
+        console.log(objeto.nombre) 
+
+        console.log(objeto.esMayorDeEdad())
+
+    </script>
+</body>
+</html>

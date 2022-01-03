@@ -38,15 +38,15 @@
 
 <body>
     <article id="sodoku">
-        <section data-i="0" data-j="0"></section>
-        <section data-i="0" data-j="1"></section>
-        <section data-i="0" data-j="2"></section>
-        <section data-i="1" data-j="0"></section>
-        <section data-i="1" data-j="1"></section>
-        <section data-i="1" data-j="2"></section>
-        <section data-i="2" data-j="0"></section>
-        <section data-i="2" data-j="1"></section>
-        <section data-i="2" data-j="2"></section>
+        <input type="number" data-i="0" data-j="0"></input>
+        <input type="number" data-i="0" data-j="1"></input>
+        <input type="number" data-i="0" data-j="2"></input>
+        <input type="number" data-i="1" data-j="0"></input>
+        <input type="number" data-i="1" data-j="1"></input>
+        <input type="number" data-i="1" data-j="2"></input>
+        <input type="number" data-i="2" data-j="0"></input>
+        <input type="number" data-i="2" data-j="1"></input>
+        <input type="number" data-i="2" data-j="2"></input>
     </article>
 <!-- PASO 11 - Creo un id y donde la funcion muestra el mensaje de jeugo terminado. Creo un acceso al dom y muestro el mensaje en el html -->
     <label id="resultado"></label>
@@ -107,7 +107,8 @@
             return bandera
         }
 
-    let elCasillas = document.querySelectorAll("#sodoku section")
+
+    let elCasillas = document.querySelectorAll("#sodoku input")
     console.log(elCasillas)
 
     for (let i = 0; i < elCasillas.length; i++) {
@@ -118,10 +119,24 @@
             let i = elTarget.getAttribute("data-i")
             let j = elTarget.getAttribute("data-j")
 
-            /* PASO 10 2/2 - Necesito reflejar la accion logica en el HTML, necesito que me devuelta el valor en la posicon de la matrix en donde el usuario esta haiendo click. Ir a ver funcion add*/
             let resultado = add(i,j)
 
-            elTarget.innerHTML = resultado
+            elTarget.value = resultado
+        })
+        /* PASO 1 
+        Agrego otro evento para detectar cuadno el usuario esta tipiando.
+        */
+        element.addEventListener("keypress", function(e){
+
+            let codeKey = e.which
+            let caracterIngresado = String.fromCharCode(codeKey)
+
+            if(caracterIngresado !== "1" && caracterIngresado !== "2" && caracterIngresado !== "3"){
+                e.preventDefault()
+            }else{
+                //Limpio el input para que no se concadene el contenido anterior
+                e.target.value = ""
+            }
         })
     }
     </script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //La plantilla y solo sirve para crear instancia.
+        class Alumno {
+            constructor(_nombre, _apellido){
+                this.nombre = _nombre
+                this.apellido = _apellido
+            }
+
+            getNombre = function(){
+                console.log(this.nombre)
+            }
+
+
+        }
+
+        let myFirstStudent = new Alumno("Matias", "rapa")
+        let mySecondStudent = new Alumno("Maurto", "bitso")
+
+    //Otra forma de declarar un clase en JS
+    function Alumno2(_nombre, _apellido) {
+        this.nombre = _nombre
+        this.apellido = _apellido
+
+        this.getNombre = function(){
+            conosle.log(this.nombre)
+        }
+    }
+    </script>
+</body>
+</html>
