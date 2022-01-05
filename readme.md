@@ -17,7 +17,7 @@ Si estar leyendo esto es porque probablemente sos uno de mis estudiantes en educ
 ## ¿Quieres ver ejemplos de codigo?
 
 Puedes entrar al siguiente repositorio de Github y descargar de la misma forma codigo de ejemplo. Si aprendes a utilizar Git puedes realizar contribuciones en el mismo.
-
+[Proyectos de Javascript Vainilla 🍦](https://github.com/rapaMatiase/Ideas-JavascriptVainilla)
 
 
 
