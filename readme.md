@@ -14,4 +14,10 @@ Si estar leyendo esto es porque probablemente sos uno de mis estudiantes en educ
 5. Seleccione descargar ZIP.
 ![alt text](https://github.com/rapaMatiase/EitCursoDeIntroduccionJS/blob/main/Img/paso5.png "Paso 5")
 
+## ¿Quieres ver ejemplos de codigo?
+
+Puedes entrar al siguiente repositorio de Github y descargar de la misma forma codigo de ejemplo. Si aprendes a utilizar Git puedes realizar contribuciones en el mismo.
+
+
+
 
