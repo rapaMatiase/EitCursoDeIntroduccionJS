@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* OPERACIONES ENTRE VARIABLES */
+
+        /* OPERACIONES MATEMATICAS */
+        //ENTRADA : numeros
+        //SALIDA : numeros
+        let a = 3, b = 2
+
+        let resultadoSuma = a + b
+        console.log(resultadoSuma)
+
+        //console.log(a+b) Mejor hacer la operacion en otra liena y guardar el resultado para poder utilizarlo posteriormente y el nombre de la variable tambien me indica que significado tiene esa operacion.
+
+        let resultadoResta = a - b
+        console.log(resultadoResta)
+
+        let resultadoMultiplicacion = a * b
+        console.log(resultadoMultiplicacion)
+
+        let resultadoDivision = a / b
+        console.log(resultadoDivision)
+
+        //Caso particualar de la division en JS
+        let casoParticularDivision = 1 / 0 //Infinity ees una palabra reservada.
+        console.log(casoParticularDivision)
+
+        let resultadoResto = a % b
+        console.log(resultadoResto)
+
+        /* NOTA : El resto se utiliza para determinar si un numero es par o impar, haciendo la operacion con un 2. Si da 0 es par, si no es impar. */
+
+
+        /* OPERACION CON STRING */
+        //ENTRADA : string, numeros
+        //SALIDA : string
+        let textoA = "hola", textoB = "como estas?"
+
+        //CONCADENACION - Forma anticuada
+        let resultadoDeConcadenar = textoA + textoB
+        console.log(resultadoDeConcadenar)
+
+        //Quiero agregar espacio en el medio?
+        resultadoDeConcadenar = textoA + ", " + textoB
+        console.log(resultadoDeConcadenar)
+
+        //CONCADENACION - Actual
+        let resultadoConcadenacionActual = `${textoA}, ${textoB}`
+        console.log(resultadoConcadenacionActual)
+
+        /* USO DE LA CONCADENACION CON `` */
+        const api = "usuario/"
+        const create = "createNewUser/"
+        let url = `www.educacionit.com/${api}/${create}/`
+
+        /* ¿Cual es el problema con el + ? */
+        let resultadoComplejo = "2" + 2
+        //Al operar con distintos tipos, JS por ser debilmente tipado intenta resolver la conversion solo. Si fuera fuertemente tipado tiraria error de semantica. 
+        console.log(resultadoComplejo)
+        /* SI opero con + un string y un numero, el resultado es un string. */
+
+
+        /* OPERACIONES DE REALACION */
+        // ENTRADA : numeros, string, booleans
+        // SALIDA : booleanos
+
+        let c = 2, d = "2"
+
+        let mayorIgualQue = (c >= d)
+        console.log(`Mayor e igual que : ${mayorIgualQue}`)
+
+        let menorIgualQue = (c <= d)
+        console.log(`Menor e igual que : ${menorIgualQue}`)
+
+        let mayorQue = (c > d)
+        console.log(`Mayor que : ${mayorQue}`)
+
+        let menorQue = (c < d)
+        console.log(`Menor que : ${menorQue}`)
+
+        let igualSinTipo = (c == d)
+        console.log(`Son iguales sin tipo: ${igualSinTipo}`)
+        // un = es agisnacion en memoria
+        // dos == es igualdad, una operacion con un resultado booleano.
+
+        let distintosSinTipo = (c != d)
+        console.log(`Son distintos sin tipo: ${distintosSinTipo}`)
+
+        let igualConTipo = (c === d)
+        console.log(`Son iguales con tipo: ${igualConTipo}`)
+        // un = es agisnacion en memoria
+        // dos == es igualdad, una operacion con un resultado booleano.
+        // tres === es igualdad que controla el tipo ademas del valor de la variable, pero es un operacion al giaul que ==
+        let distintosConTipo = (c !== d)
+        console.log(`Son distintos con tipo: ${distintosConTipo}`)
+
+
+        /* OPERACIONES LOGICAS */
+        //Proxima clase directamente
+    </script>
+</body>
+</html>

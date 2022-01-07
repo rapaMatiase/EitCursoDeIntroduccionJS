@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         /* Permitir al usuario ingresar un nuemro, y si este es par, mostrar un mensaje informandolo. Si no, mostrar un mensaje diciendo que es impar. */
+
+        //1 - Ingrese un numero
+        let numeroIngresado = prompt("Ingrese un numeor")
+        //2 - Lo convierto a tipo numerico
+        let numeroConvertido = parseInt(numeroIngresado)
+        //3 - Operar con el resto y un 2 para determinar si es par o no.
+        let resto = numeroConvertido % 2
+        //4 - Planteo el if
+        if (resto == 0) { //Si resto es igual a 0 entonces,
+            alert("Es par")
+        }else{// si no, entonces
+            alert("Es impar")
+        }
+        
+    </script>
+</body>
+</html>

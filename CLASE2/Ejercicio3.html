@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        Realizar un programa que :
+        1) Solicite un primer numero al usuario con prompt y lo guarde en una variable.
+        2) Solicatar un segundo numero utilizando otro prompt y guardar en otra vairable.
+        3) Hacer la suma de estos dos y guardar en una variable mas.
+        4) Crear un mensaje como el siguiente "Resultado = ..."
+        5) Mostrar el resultado por consola.
+
+        ¿Es correcto el resultado mostrado?
+        2min 10.47AM
+        */
+        //1
+        let numeroUnoIngresado = prompt("Ingrese un numero")
+        //2
+        let numeroDosIngresado = prompt("Ingrese otro numero")
+        //3
+        let suma = numeroUnoIngresado + numeroDosIngresado
+        //4
+        let mensaje = `Resutlado = ${suma}`
+        //5
+        console.log(mensaje)
+        /* EL RESUTLADO NO ES CORRECTO PROQUE ME CONCADENA, NO ME SUMA. ESO ES PORQUE EL PROMPT ME CONVIERTE TODO A STRING. */
+    </script>
+</body>
+</html>
