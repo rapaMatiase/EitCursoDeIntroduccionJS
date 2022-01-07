@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo" class = "clase_titulo">mensaje</h1>
+    <h1 id="titulo2" class = "clase_titulo">mensaje</h1>
+    <script>
+        // cuando queremos  que si una operación es falso ejecute otra accion tenemos el operador else
+        // if(true){
+        //     alert("Ingresando al operador if")
+        // }else{
+        //     alert("Ingresando al operador else")
+        // }
+
+        // if(true){
+        //     alert("ingresando al primer if")
+        // }else if(true){
+        //     alert("ingresando al segundo if")
+        // }else if(true){
+        //     alert("ingresando al tercer if")
+        // }else{
+        //     alert("ingresando al else")
+        // }
+
+        // var numero = 1
+        // var numeroString = 2
+
+        //una logica con if and else la cual tiene seguir las mismas reglas
+        //si los dos numero son iguales, mostrar un mensaje que diga los dos numero son iguales, pero de distinto tipo
+        //si los dos numeros son iguales pero del mismo tipo tienen que hacer un alert diciendo los numero son iguales y del mismo tipo
+        //si no son iguales tienen que mostrar un mensaje de los numeros no son igules
+
+        // 1 y 1 iguales mismo tipo
+        // 1 y "1"igulas distinto tipo
+        // 1 y 2 numeros de distinto tipo
+
+        // if(numero === numeroString){
+        //     alert("los numeros son iguales y del mismo tipo")
+        // }else if(numero == numeroString){
+        //     alert("los numeros son iguales pero de distinto tipo")
+        // }else{
+        //     alert("los numeros son distintos")
+        // }
+
+        // switch(1){
+        //     case 1 : alert("soy el numero 1");
+        //     break;
+        // //     case 2 : alert("soy el numero 2");
+        // //     case 3 : alert("soy el numero 3");
+        // //     break;
+        // //     default : alert("no soy ningun numero valido")            
+        // // }
+
+        // //switch ingresando una edad adentro de los parentesis
+        // //si la edad es igual a 15 años (mostrar un mensaje que diga usted todavia es menor de edad)
+        // // si la edad es igual a 16 años tienen que mostrar un mensaje que diga ya podes votar
+        // //si la persona tiene 18 años sigfica que tambien puede votar entonces tienen que tambien mostrar el mensaje de los 16 años
+        // // si laedad es igual a 18 años mostrar un mensaje que diga sos mayor de edad
+        // //si la edad ingresada no es ni 15,16 o 18 muestran edad invalida
+
+        // // 15 menor de edad
+        // // 16 podes votar
+        // // 18 podes votar mayor de edad
+        // var edad = 17
+        // switch(16){
+        //     case 15: alert("sos menor de edad")
+        //     break;
+        // //     case 18: alert("soy mayor de edad");
+        // //     case 16: alert("puedo votar");
+        // //     break;
+        // //     default: alert("valor invalido");
+        // // }
+
+        // // switch(true){
+        // //    case edad <= 15:alert("soy menor de edad");
+        // //    break;
+        // //    case edad >= 18:alert("soy mayor de edad")
+        // //    case edad >= 16:alert("puedo votar") 
+        // //    break;
+        // // }
+
+        // if(1 === 1 && 2 === 3){
+        //     alert("se ejecuta")
+        // }
+        // // operadores and y or (&& and ||)
+        // // cuando usamos and y combinamos operaciones tienen que ser todas verdadero para que sea verdaro
+        // // true && true = true
+        // // false && false = false
+        // // false && true = false
+        // // cuando usamos el or || y combinamos operaciones con una sola que sea verdadero es verdadero
+        // // true || true = true
+        // // false || false = false
+        // // false || true = verdadero
+        // if( (1 === 1 || 2 === 2) && (1 === 2) ){
+        //     alert("se ejecuta el or ")
+        // }
+
+        // // while ( mientras)
+        // // que mientras lo que este dentro del while sea verdadero voy a generar un bucle hasta que sea false
+        // var dato = true
+        // while(dato){
+        //     console.log("hola")
+        //     dato = false
+        // }
+
+        // tienen que genearase un proceso en el cual la edad de una persona empiece en 0 años
+        // y llegue a 99 años cuando llega a esa edad tiene que dejar de cumplir años
+        // while
+        // console.log("hoy cumplo : edad")
+
+        // var edad = 0
+        // while (edad < 99){
+        //     edad = edad + 1
+        //     console.log("hoy cumplo : "+edad)
+        // }
+
+        // for (var index = 0; index < 100; index++) {
+        //     console.log(index);
+        // }
+        // for(primero declaramos una variable para usarla de control, luego una logica para terminar el bucle, una logica para agregar valor a la ultima variable)
+
+    //     //manejo de ventanas
+    //     // tenemos alert que nos genera iun pop up mostrando un mensaje
+    //     // alert("hola soy un alert");
+
+    //     // el metodo prompt genera un pop en el cual podemos poner una pregunta y el usuario puede ingresar texto este metodo siempre devuelve un string
+    //     var clase = prompt("como se llama esta clase?", "js")
+    //     alert(clase)
+
+    //     // el metodo confirm en el cual mediante una pregunta que hagamos el usuario puede aceptar o cancelar y esto nos devuelve true o false
+    //     var confirmacion = confirm("esta clase es js?")
+    //     alert(confirmacion)
+
+    //     // como prompt siempre nos devuelve un string osea un text no nos sirve para hacer cuentas por ejemplo 
+    //     // para poder tranformar u string a un numero vamos a utilizar parse
+    //     parseInt("2")
+
+    //     // tiene que hacer una calculadora 
+    //     // la persona va poder ingresar dos numero y una operación
+    //     // y ustedes tienen que hacer el calculo y mostrarlo en consola o en un alert
+    //     // permitirle a la person sumar, restar, dividir y multiplicar.
+
+    // var numeroUno = prompt("Ingrese un número")
+    // var operacion = prompt("Ingrese la operación: SUMA - RESTA - MULTIPLICACION - DIVISION")
+    // var numeroDos = prompt("Ingrese un número")
+
+    // var numeroUnoParse = parseInt(numeroUno)
+    // var numeroDosParse = parseInt(numeroDos)
+
+
+    // if (operacion == "SUMA") {
+    //     alert(numeroUnoParse + numeroDosParse)
+    // }
+    // else if (operacion == "RESTA") {
+    //     alert(numeroUnoParse - numeroDosParse)
+
+    // }
+    // else if (operacion == "MULTIPLICACION") {
+    //     alert(numeroUnoParse * numeroDosParse)
+
+    // }
+    // else if (operacion == "DIVISION") {
+    //     alert(numeroUnoParse / numeroDosParse)
+
+    // }
+    // switch(operacion){
+    //     case "SUMA": alert(numeroUnoParse + numeroDosParse);
+    //     break;
+    //     case "RESTA": alert(numeroUnoParse - numeroDosParse);
+    //     break;
+    //     case "MULTIPLICACION": alert(numeroUnoParse * numeroDosParse)
+    //     break;
+    //     case "DIVISION": alert(numeroUnoParse / numeroDosParse);
+    //     break;
+    //     default: alert("operación invalida");
+
+    // }
+    // nos permite agarrar el primer elemnto con el id que esta entre parentesis
+        var elemento = document.getElementById("titulo2")
+    // nos permite agarrar todas los elementos con una clase en particular
+        var elementosClases = document.getElementsByClassName("clase_titulo")
+    // nos permite agarrar todas los elementos con un tag en particular
+        var elementosTag = document.getElementsByTagName("h1")
+        
+    //array 
+    // el array es un coleccion de variables , con variables de distinto o oigual tipo adentro
+    // var array = [1,2,"variable",elemento]    
+    // array.push("hola")
+    // for (var index = 0; index < array.length; index++) {
+    //     console.log("esta posicion tiene",array[index])
+    // }
+    var array = []
+    var edadArray = 0
+    // utilizando el ejercicio de las edades generar con un for, o while un bucle que nos agregue edad y cuando la edad coincida con las consignas de mayor menor y puede votar, agregar esa info a un array
+    while(edadArray < 20){
+        
+            switch(edadArray){
+            case 15: array.push("sos menor de edad")
+            break;
+            case 18: array.push("soy mayor de edad");
+            break;
+            case 16: array.push("puedo votar");
+            break;
+            default: ;
+        }
+    edadArray ++
+    }
+    console.log(array)
+
+    //
+    </script>
+</body>
+</html>

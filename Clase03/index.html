@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gray{
+            background-color: gray;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .title{
+            background-color: black;
+            color: white
+        }
+    </style>
+</head>
+ <body>
+     <div id="main">
+     </div>
+        <!-- <h1 id="miTitulo">Hola mundo!</h1>
+        <div id="miParrafo"></div> -->
+   <script>
+        // var titulo = document.getElementById("titulo");
+        // console.log(titulo)
+        // var ul = document.getElementById("ul")
+        //la primera es al titulo cambiarle el nombre por clase 03
+        //adentro del div
+        // poner un parrafo que diga bienvenidos al curso de js
+        // var titulo = document.getElementById("miTitulo")
+        // var parrafo = document.getElementById("miParrafo")
+
+        // titulo.innerText = "Clase03"
+        // parrafo[0].innerHTML = "<p>Bienvenidos al curso de JS<p>"
+
+        // // var frag = document.createDocumentFragment();
+        //  var p = document.createElement("p");
+        //  p.innerText = "soy un parrafo";
+        //  p.id = "parrafo"
+        
+        //  parrafo.appendChild(p)
+
+        //al div de main agregarle un titulo con clase 02
+        // y agregarle abajo un div, con un parrafo que diga bienvenidos al curso de js
+        var main = document.getElementById("main")
+        var titulo = document.createElement("h1")
+        titulo.innerHTML = "Hola soy el titulo"
+        main.appendChild(titulo)
+
+        var parrafo = document.createElement("p")
+        parrafo.innerHTML = "Hola soy un parrafo"
+        var div = document.createElement("div")
+        div.appendChild(parrafo)
+        main.appendChild(div)
+
+        var nombres = ['Pablo','Sol','Camila','Cesar'];
+
+        var table = document.createElement('table');
+        var thead = document.createElement('thead');
+        var th1 = document.createElement('th');
+        var th2 = document.createElement('th');
+        var tbody = document.createElement('tbody');
+        th1.innerText = 'id'
+        th2.innerText = 'Nombre'
+        thead.appendChild(th1);
+        thead.appendChild(th2);
+        thead.className = "title"
+        table.appendChild(thead)
+        table.appendChild(tbody);
+        for (let index = 0; index < nombres.length; index++) {
+            // insertar esta info en la tabla
+            // generarse un tr el cual tiene que contener tdNombre y tdId
+            var tr = document.createElement("tr");
+            var tdNombre = document.createElement("td");
+            tdNombre.innerText = nombres[index]
+            var tdId = document.createElement("td");
+            tdId.innerText  = index+1
+            tr.appendChild(tdId);
+            tr.appendChild(tdNombre);
+            tbody.appendChild(tr)
+            if(index % 2 != 0){
+                tr.className = "gray"
+            }else{
+                tr.className = "yellow"
+            }
+            // la segunda parte del ejercicio es agregarle estilo a esto
+            // los estilos a agregar son:
+            // las filas pares se tienen que ver grises
+            // y las filas impares amarillas
+            //y la parte de arriba de la tabla se tiene que ver negro
+        }
+        main.appendChild(table)
+
+
+
+        
+    </script> 
+ </body> 
+</html>

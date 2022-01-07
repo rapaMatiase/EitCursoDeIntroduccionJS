@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="main">
+        <!-- <table id="tabla">
+            <thead>
+                <th>id</th>
+                <th>nombre</th>
+            </thead>
+        </table> -->
+    </div>
+    <script>
+        var array2 = [0,1];
+        var array = [1,"string",true,array2];
+
+//ingresa uno o varios  elementos al final
+        array.push('victoria')
+//ingresa uno o varios elemento al princiopio
+        array.unshift('victoria')
+
+//borra el ultimo elementlo
+        array.pop()
+//borra el primer elemento
+        array.shift()                
+// el metodo splice nos permite pararnos en un indice del array
+//decirle cuantos campos tiene que eliminar o reemplazar por los campos que ponemos en el ultimo atributo
+        array.splice(2,1)
+
+        array.splice(2,1,"reemplazando")
+
+
+        var alumnosActivos = ["juan","julio","soledad","maria"]
+
+        //agregar 3 alumnos nuevos al array alumnos activos
+
+        //luego tienen que borrar los dos primero usuarioas("julio ,Juan")
+
+        // a maria como existen varias tienen que agregarle un apellido
+        //["soldad","maria gonzales",..elresto de la info que agregaron ustedes]
+        var alumnosActivos = ["Juan","Julio","Soledad","Maria"]
+
+        alumnosActivos.push("Sol","Rodrigo","Jimena")
+        alumnosActivos.splice(0,2)
+        alumnosActivos.splice(1,1,"Maria Gonzalez")
+
+        //la propiedad index of nos permite ubicar el indice de un array
+        alumnosActivos.indexOf('Soledad')
+
+        //la funcion filter nos permite filtrar un array , no reemplaza el array existente sino que nos devuelve otro array con el filtro que quiera
+        // filter(variable => variables(con su logica))
+        alumnosActivos.filter(alumno => alumno == 'Sol')
+
+
+
+        //lo que tienene que hacer es con el array que tenian antes reemplazar a maria utilizando index of por tres nombres
+        // y luego tienen que traer todo lo que sea distinto a Juan
+        // su array tiene que quedar guardado sin juan
+        alumnosActivos.splice(alumnosActivos.indexOf('Maria',1,"pedro","jose","juan"))
+
+        alumnosActivos = alumnosActivos.filter(x => x != 'juan')
+
+
+
+        //tienen que crearse un div con id main
+        //adentro crearse una tabla creando los elementos
+        //<table>
+            // <thead>
+            //     <th>id</th>
+            //     <th>nombre</th>
+            // </thead>
+            // <tbody>
+            //     <tr>
+            //         <td>    
+            //         <td>    
+            //     </tr>
+            // <tbody>
+         //de un array vacio, ingresarle información                       
+        //filtran la información sacando un nombre
+        //agregan la info a la tabla.  con un append child
+        // var frutas = []
+        // frutas.push("banana")
+        // frutas.push("manzana")
+        // frutas.push("mandarina")
+        // frutas.push("naranja")
+
+        // frutas = frutas.filter(x => x != "naranja")
+        // var table = document.getElementById("tabla")
+        // var tbody = document.createElement("tbody")
+        // table.appendChild(tbody)
+        // for (let index = 0; index < frutas.length; index++) {
+        //     var tr = document.createElement("tr")
+        //     var tdId = document.createElement("td")
+        //     var tdNombre = document.createElement("td")
+
+        //     tdNombre.innerText =  frutas[index]
+        //     tdId.innerText =  index
+        //     tr.appendChild(tdId)
+        //     tr.appendChild(tdNombre)
+        //     tbody.appendChild(tr)
+            
+        // }
+        var alumnos = ["Maria Gonzalez", "Camila Rodriguez","Miguel Martinez", "Sol Lopez", "Cristian Fernandez"]
+
+        var main = document.getElementById("main");
+        var table = document.createElement("table")
+        var thead = document.createElement("thead");
+        var tbody = document.createElement("tbody");
+        var th1 = document.createElement("th");
+        var th2 = document.createElement("th");
+
+        th1.innerText = 'Alumnos';
+        th2.innerText = 'Numero';
+        table.appendChild(thead)
+
+        thead.appendChild(th1)
+        thead.appendChild(th2)
+        table.appendChild(tbody)
+        for( let index=0; index < alumnos.length; index++ ){
+            console.log(index)
+            var tr = document.createElement('tr');
+            var tdAlumnos = document.createElement('td');
+            tdAlumnos.innerText = alumnos[index]
+            var tdNumero = document.createElement('td')
+            tdNumero.innerText = index+1
+            tr.appendChild(tdNumero)
+            tr.appendChild(tdAlumnos)
+            tbody.appendChild(tr)
+        }
+
+        main.appendChild(table)
+
+
+        
+    </script>
+    
+</body>
+</html>
