@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> Ingrese un numero</label>
+    <input type="number" id="number">
+    <button onclick="ingresarNumero()"> CLICK ME</button>
+        <!-- 1 -->
+    <ul id="myList">
+
+    </ul>
+    <script>
+        /* 
+            Ejercicio 3
+            1) Crear en el HTML una lista desordenada, con un atributo ID.
+            2) Ademas de agregar el elemento en el array, insertar un nuevo elemenot LI en la lista creada en el paso 1. 
+
+            2min 21.38
+        */
+
+        
+        let listadoIngresado = []
+
+        let ingresarNumero = () => {
+            
+
+            let elInput = document.getElementById("number")
+            let numeroIngresado = elInput.value
+
+            
+            listadoIngresado.push(numeroIngresado)
+            
+            /* 2 */
+            let elLista = document.getElementById("myList")
+            //Creo el nuevo elemento de la lista
+            let elNewLi = document.createElement("li")
+            //Guardo el valor ingresado por el usuario en el nuevo elemento para la lista
+            elNewLi.innerHTML = numeroIngresado
+            //Inserto el nuevo elemento en la lista.
+            elLista.appendChild(elNewLi)
+            
+        }
+
+
+
+
+    </script>
+</body>
+</html>

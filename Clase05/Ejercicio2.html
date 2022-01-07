@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> Ingrese un numero</label>
+    <input type="number" id="number">
+    <button onclick="ingresarNumero()"> CLICK ME</button>
+    <script>
+        /* 
+            Ejercicio 2
+            1) Cambiar las palabras reservadas VAR por LET
+            2) Crear una variable del tipo array de nombre "listado ingresado"
+            3) Agregar al array el valor ingresado por el usuario utilizando push
+            4) Mostrar por consola el array
+
+            PREGUNTA. La delcaracion del array debe ser ¿dentro o fuera de la funcion? ¿Porque? 
+
+            3min 21.28
+        */
+
+        //2
+        let listadoIngresado = []
+
+        let ingresarNumero = () => {
+            
+
+            let elInput = document.getElementById("number")
+            let numeroIngresado = elInput.value
+
+            //3
+            listadoIngresado.push(numeroIngresado)
+            //4
+            console.log(listadoIngresado)
+
+        }
+
+        /* RESPUESTA : Debo dejar el array declarado fuera de la funcion para que cada vez que se termina de ejecutar la misma, este no sea destruido. Asi puedo acumular los valores ingresados por el usuario en el array. */
+
+
+
+    </script>
+</body>
+</html>

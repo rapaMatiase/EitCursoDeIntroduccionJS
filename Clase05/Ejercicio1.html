@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2 -->
+    <label> Ingrese un numero</label>
+    <input type="number" id="number">
+    <!-- 4 -->
+    <button onclick="ingresarNumero()"> CLICK ME</button>
+    <script>
+        /* 
+            Ejercicio 1 - Testeo
+            1)Crear una funcion arrow llamada "Ingresar numero" y guardarla en una variable.
+            2) Crear el HTML necesario para que el usuario ingrese un numero por un formulario. No olvidar dar un atributo ID al input.
+            3) Dentro de la fucion acceder al DOM, obtener el input donde ingresa el numero, y luego obtener el valor ingresado por el usuario.
+            4) Conectar un boton con el metodo onlcik al la funcion creada en el paso 1.
+            3min 20.33
+            5) Mostrar el valor ingresado por consola.
+        */
+
+        //1 - Declaro la funcion
+        var ingresarNumero = () => {
+            //3 - Obtener el elemento input
+            var elInput = document.getElementById("number")
+            //3 - Obtener el valor ingresado por el usuario
+            var numeroIngresado = elInput.value
+
+            //5
+            console.log(`Numero ingresado : ${numeroIngresado}`)
+            //console.log(elInput) No imprimo el input, porque no me interesa el elemento de HTML si no el valor ingresado dentro de este. 
+        }
+
+        /* Si llamao la funcion aca abajo suelta, se ejecuta cuadno se carga la pag. Yo quiero que solo se ejecute cuendo hace click.  */
+
+    </script>
+</body>
+</html>
