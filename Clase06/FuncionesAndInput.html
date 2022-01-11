@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button onclick="mostrarMensaje()"> CLICK ME </button>
+    <script>
+ 
+        function crearMensaje(nombre){
+            let mensaje = `Hola, ${nombre}!!`
+            return mensaje
+        }
+
+        function mostrarMensaje(){
+            let elInput = document.getElementById("name")
+            //Todo lo devuelto por .value es un string siempre sin importar si son caracteres numericos.
+            let textName = elInput.value 
+            let mensajeCreado = crearMensaje(textName)
+            alert(mensajeCreado)
+        }
+
+    </script>
+</body>
+</html>

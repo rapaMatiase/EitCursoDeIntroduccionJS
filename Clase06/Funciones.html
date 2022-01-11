@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let funcionConParametroRetorno = (argumento o parametro) => {
+        //     LAS OPERACIONE NECESARIAS PARA OBTENER ESE VALOR DE RETORNO.
+        //     return Valor a devolver
+        // }
+
+        let funcionConParametroRetorno = (a, b) => {
+            //Recibe dos numeros y devuelve su suma.
+            let c = a + b
+            return c
+        }
+
+        let a = prompt("Ingrese un numero")
+        let aConvertido = parseInt(a)
+
+        let b = prompt("Ingrese un numero")
+        let bConvertido = parseInt(b)
+
+        let resultado = funcionConParametroRetorno(aConvertido, bConvertido)
+        console.log(resultado)
+
+        function funcionConParametroRetorno2(a,b){
+            let c = a + b
+            return c
+        }
+    </script>
+</body>
+</html>

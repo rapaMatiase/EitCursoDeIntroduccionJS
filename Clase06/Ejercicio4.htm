@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //EJECUTAR TODO LAS FUNCIONES POR CONSOLA POR AHORA.
+        let lista = []
+
+        
+        function addItem(item){
+            lista.push(item)
+        }
+
+        /* Crear una funcion que recibe un texto (tarea) y elimine este texto del array. Utilizar filter para lograrlo 2min 21.05. */
+
+        function filterItemByValue(itemToFilter){
+            let listaFiltrada = lista.filter((item) => {
+                return item != itemToFilter
+            })
+            lista = listaFiltrada
+        }
+
+        //BONUS DE LAS FUNCIONES CON ARRAY
+
+        function filterItemByIndex(itemToFilterIndex){
+            
+            let listaFiltrada = lista.filter((item, index) => {
+                return index != itemToFilterIndex
+            })
+            lista = listaFiltrada
+        }
+
+
+    </script>
+</body>
+</html>

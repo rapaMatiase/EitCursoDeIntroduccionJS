@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Crear una funciones que recibe el nombre de un usuario y devuelva un mensaje que dia "Hola, NOMBRE INGRESADO!!".
+        Solicitar el nombre con prompt antes de llamar a la funcion y mostrar el resultado despues de que se llamo a la funcion.
+        
+        2min 20.32*/
+
+        function crearMensaje(nombre){
+            let mensaje = `Hola, ${nombre}!!`
+            return mensaje
+        }
+
+        let nombreIngresado = prompt("Ingrese su nombre")
+
+        let mensajeCreado = crearMensaje(nombreIngresado)
+
+        alert(mensajeCreado)
+
+
+        //CODIGO DE UN COMPAÑERO
+        //El nombre de variable "nom" no es declarativo.    
+        // let nombreRecibido = (nom) => {
+        //     let mensaje = "Hola, " + nom
+        //     //Una funcion no deberia tener alerts o cuadros de dialo en general.
+        //     alert(mensaje)
+        // }
+        // //Anidamiento de funciones. Una linea tiene que resolver un problema, no dos.
+        // nombreRecibido(prompt("Ingrese su nombre"))
+
+    </script>
+</body>
+</html>

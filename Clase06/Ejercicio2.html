@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numberOne">
+    <input type="number" id="numberTwo">
+
+    <button onclick="sumar()"> CLICK ME</button>
+
+   
+
+    <script>
+
+        /* Crear un Interfaz que cuente con:
+            2 input del tipo numerico
+            1 boton
+
+            EL programa debe tener una funcion que al click en el boton sume los valores ingresados en los input y mostrar en un alerte.
+            2min 20.44PM
+        */
+
+        function sumar(){
+            //Obtengo los elementos de la interfaz
+            let elNumberOne = document.getElementById("numberOne")
+            let elNumberTwo = document.getElementById("numberTwo")
+
+            //Saco los valos de los elementos de HTML
+            let numberOneIngresado = elNumberOne.value 
+            let numberTwoIngresado = elNumberTwo.value 
+
+            //Convertir a valor numerico
+            let numberOneConvertido = parseInt(numberOneIngresado)
+            let numberTwoConvertido = parseInt(numberTwoIngresado)
+
+            //Ahora podesmo sumar
+            let suma = numberOneConvertido + numberTwoConvertido
+            alert(suma)
+        }
+
+
+    </script>
+</body>
+</html>

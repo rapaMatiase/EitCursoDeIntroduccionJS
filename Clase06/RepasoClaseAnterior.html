@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="esteEsElNombre" onclick="myFuncion()" > Hola </p>
+    <script>
+
+        let myFuncion = () => {
+            let elP = document.getElementById("esteEsElNombre")
+            console.log(elP)
+        }
+
+        //https://babeljs.io/ esta libreria se hace cargo de trasformar el JS en una version mas vieja de sintaxis para que tus proyectos puedan correr en navegadores no actulizados. 
+
+        //Contexto global
+        // var nombre = "Matias"
+        // console.log(nombre)
+        // for(let i = 0 ; i < 2; i++){
+        //     //Inicio del contexto de funcion
+        //     var nombre = "Lucas"
+        //     console.log(nombre)
+        //     //Fin del contexto de funcion
+        // }
+        // //Contexto global
+        // console.log(nombre)
+
+        // let nombre = "Matias"
+        // console.log(nombre)
+        // for(let i = 0 ; i < 2; i++){
+        //     //Inicio del contexto de funcion
+        //     let nombre = "Lucas"
+        //     console.log(nombre)
+        //     //Fin del contexto de funcion
+        // }
+        // //Contexto global
+        // console.log(nombre)
+ 
+    </script>
+</body>
+</html>

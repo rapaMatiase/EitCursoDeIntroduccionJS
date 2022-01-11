@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista"></ul>
+    <script>
+        //EJECUTAR TODO LAS FUNCIONES POR CONSOLA POR AHORA.
+        let lista = [1,2,3]
+
+        
+        function addItem(item){
+            lista.push(item)
+        }
+
+
+        function filterItemByValue(itemToFilter){
+            let listaFiltrada = lista.filter((item) => {
+                return item != itemToFilter
+            })
+            lista = listaFiltrada
+        }
+
+        //BONUS DE LAS FUNCIONES CON ARRAY
+
+        function filterItemByIndex(itemToFilterIndex){
+            
+            let listaFiltrada = lista.filter((item, index) => {
+                return index != itemToFilterIndex
+            })
+            lista = listaFiltrada
+        }
+
+        /* En la interfaz agregar un elemento UL con id de valor "lista".
+        
+        Crear una funcion que inserte dentro de este un elemento LI por cada item de la lista. Obviamente, dentro de cada LI debe haber texto que represneta a un item de la lista. 
+        3min 21.25
+        */
+
+        function CargarLista(){
+            let elUl = document.getElementById("lista")
+            for(let i = 0; i < lista.length; i++){
+                let elIl = document.createElement("li")
+                elIl.innerHTML = lista[i]
+                elUl.appendChild(elIl)
+            }
+            
+        }
+    </script>
+</body>
+</html>
