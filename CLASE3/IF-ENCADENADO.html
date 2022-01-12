@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        /* Solicitar al usuario su edad y determinar si peude o no sacara el registro;
+        - Si tiene menos 17 años no lo puede sacar.
+        - Si tiene 17 años lo puede sacar con el permiso de sus papas.
+        - Si tiene 18 o mas, lo puede sacar.
+        - Si tiene 65 o mas, lo puede sacar pero poro por un año.*/
+
+        //Solicito la edad
+        let edadIngresada = prompt("Ingrese su edad")
+        //Convierto el ingreso a tipo numerico
+        let edadConvertida = parseInt(edadIngresada)
+        //Determino si es mayor de 18
+        
+        //ORDENO LOS CASOS DE LOS MAS ESPECIFICO A LO MAS GENERAL.
+        if(edadConvertida == 17){
+            alert("Lo podes sacar con permiso de tus padres")
+        }else if(65 <= edadConvertida){
+            alert("Lo podes scaar, pero por un año")
+        }else if (18 <= edadConvertida){
+            alert("Lo podes sacar.")
+        }else{
+            alert("No lo podes sacar.")
+        }
+    </script>
+</body>
+</html>

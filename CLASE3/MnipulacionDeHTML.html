@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="texto"> Hola</p>
+
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+    <p>nada en espacial</p>
+
+    <section>
+        <p>nada en espacial</p>
+        <p>nada en espacial</p>
+        <p>nada en espacial</p>
+        <h2>Hola </h2>
+        <p>nada en espacial</p>
+        <p>nada en espacial</p>
+    </section>
+    <script>
+       
+        let elP = document.getElementById("texto")
+        console.log(elP)
+        //Voy a repteri la linea de arrriba 30 veces para seleccionar cada p? NO
+
+        //Si uso querySelectorAll, me crea una lista con todos los p.
+        let elPs = document.querySelectorAll("p")
+        console.log(elPs)
+
+        //Si uso querySelector, solo me trae el primer p que encuentra
+        let elPPrimero = document.querySelector("p")
+        console.log(elPPrimero)
+
+        //El verdadero poder de un querySelector o querySelectorAll
+        //document.querySelectorAll("selector ")
+        let elPs2 = document.querySelectorAll("section p")
+        console.log(elPs2)
+
+    </script>
+</body>
+</html>
