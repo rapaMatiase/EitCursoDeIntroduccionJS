@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista"></ul>
+    <script>
+
+        //Al document podemos pedir elementos
+        let elUl = document.getElementById("lista")
+
+        //pero tambien podemos solicitar crear e insertar elementos.
+
+        let listaDeCompras = [
+            "Cocacola",
+            "Pizza",
+            "Papel higenico",
+            "Papas fritas"
+        ]
+
+        for(let i = 0 ; i < listaDeCompras.length; i++){
+            let elLi = document.createElement("li")
+            //Entre commillas va el nombre de un elementos de HTML. Solo 1 elemento.
+            let textLi = document.createTextNode(listaDeCompras[i])
+            //Insertar el texto dentor del elemento que lo contrendra
+            elLi.appendChild(textLi)
+            //Insertar el elemento que cree en el HTML?
+            elUl.append(elLi)
+        }
+    </script>
+</body>
+</html>
