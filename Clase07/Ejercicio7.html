@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Dada una matrix determinar si todas fila  estan conformada solo por elementos distintos.
+        
+        Todas las matrices son de 3x3.
+        
+        Ejemplo
+        [
+            [1,2,3],
+            [2,3,2],
+            [2,2,2]
+        ]
+
+        El resultado es FALSO
+
+[
+            [1,2,3],
+            [1,3,2],
+            [1,3,2]
+        ]
+
+        El resultado es TRUE
+        */
+       let matrix = [
+            [1,2,3],
+            [1,3,2],
+            [1,3,2]
+        ]
+
+        let bandera = true //Todos son iguales hasta demostrar lo contrario
+        for(let i = 0; i < matrix.length; i++){
+            if(matrix[i][0] == matrix[i][1] && matrix[i][1] == matrix[i][2]){
+                bandera = false
+            }
+        }
+
+        console.log(bandera)
+    </script>
+</body>
+</html>

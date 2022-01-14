@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Nosotors determinamos que "-" significa posicion libre.
+        let tableroTateti = [
+            ["-","-","-"],
+            ["-","-","-"],
+            ["-","-","-"]
+        ]
+
+        let cantidadDeTurno = 0
+
+        const SIMBOLO_JUGADOR_X = "X"
+        const SIMBOLO_JUAGADOR_O = "O"
+        const SIMBOLO_VACIO = "-"
+
+        let turno = SIMBOLO_JUGADOR_X
+
+
+        function estaLaPosicionLibre(i,j){
+            return tableroTateti[i][j] == SIMBOLO_VACIO
+        }
+
+        //Funcion que contrle los 3 en linea horizontales
+        function hayTresEnLineaHorizontal(){
+            //2min 21.39HS
+            let hayTresEnLinea = false
+            for(let i = 0; i < tableroTateti.length; i++){
+                if(tableroTateti[i][0] == tableroTateti[i][1] && tableroTateti[i][0] == tableroTateti[i][2] && tableroTateti[i][0] != "-" && tableroTateti[i][1] != "-" && tableroTateti[i][2] != "-"){
+                    hayTresEnLinea = true
+                }
+            }
+            return hayTresEnLinea
+        }
+
+        //Funcion que contrle los 3 en linea verticales
+        function hayTresEnLineaVertical(){
+            //2min 21.45
+            let hayTresEnLinea = false
+            for(let j = 0; j < tableroTateti.length; j++){
+                if(tableroTateti[0][j] == tableroTateti[1][j] && tableroTateti[0][j] == tableroTateti[2][j] && tableroTateti[0][j] != "-" && tableroTateti[1][j] != "-" && tableroTateti[2][j] != "-"){
+                    hayTresEnLinea = true
+                }
+            }
+            return hayTresEnLinea
+        }
+        //Funcion que contrle los 2 dos diagonales
+        function hayTresEnLineaDigonal(){
+            let hayTresEnLinea = false
+
+            if(tableroTateti[0][0] == tableroTateti[1][1] && tableroTateti[0][0] == tableroTateti[2][2] && tableroTateti[0][0] != SIMBOLO_VACIO && tableroTateti[1][1] != SIMBOLO_VACIO && tableroTateti[2][2] != SIMBOLO_VACIO){
+                hayTresEnLinea = true
+            }
+
+            if(tableroTateti[0][2] == tableroTateti[1][1] && tableroTateti[0][2] == tableroTateti[2][0] && tableroTateti[0][2] != SIMBOLO_VACIO && tableroTateti[1][1] != SIMBOLO_VACIO && tableroTateti[2][0] != SIMBOLO_VACIO){
+                hayTresEnLinea = true
+            }
+
+            return hayTresEnLinea
+        }
+
+        function hayGanador(){
+            return hayTresEnLineaHorizontal() || hayTresEnLineaVertical() || hayTresEnLineaDigonal()
+        }
+
+        //Donde la i y j son las coordenadas donde jugar
+        function play(i, j){
+
+            if(estaLaPosicionLibre(i,j)){
+                tableroTateti[i][j] = turno
+                cantidadDeTurno++
+
+                let hayGanadorEntoncesSeTerminoElJuego = hayGanador()
+                if(hayGanadorEntoncesSeTerminoElJuego){
+                    console.log(`Hay un ganador. ${turno}`)
+                }
+                
+                let noHayGanador = !hayGanadorEntoncesSeTerminoElJuego
+                if(!noHayGanador && cantidadDeTurno == tableroTateti.length){
+                    console.log("Es un empate")
+                }
+
+                //Cambio el turno
+                if(turno == SIMBOLO_JUGADOR_X){
+                    turno = SIMBOLO_JUAGADOR_O
+                }else{
+                    turno = SIMBOLO_JUGADOR_X
+                }
+
+                
+            }else{
+                console.log("Esa posicion ya esta ocupada")
+            }
+
+            console.table(tableroTateti)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Dada una matrix determinar si cada columnas de forma individual esta conformada solo por elementos iguales.
+        
+        Todas las matrices son de 3x3.
+        
+        Ejemplo
+        [
+            [1,2,2],
+            [2,3,2],
+            [2,2,2]
+        ]
+
+        Controlamos columnas ahora!!
+        1) No son iguales (false)
+        2) No son iguales (false)
+        3) Son iguales (true)
+        */
+       let matrix = [
+            [1,3,2],
+            [2,2,2],
+            [2,3,2]
+        ]
+
+        for(let j = 0; j < matrix.length; j++){
+            if(matrix[0][j] == matrix[1][j] && matrix[1][j] == matrix[2][j]){
+                console.log("Son iguales")
+            }else{
+                console.log("Son distintos")
+            }
+        }
+    </script>
+</body>
+</html>

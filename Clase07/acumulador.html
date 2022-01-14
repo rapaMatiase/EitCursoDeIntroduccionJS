@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        /* ACUMULADOR CON VALORES NUMERICOS */
+       //Caso partiuclar del acumulador, es una sumatoria del 0 al 9
+        let sumatoria = 0
+        for(let i = 0; i < 10; i++){
+            sumatoria = sumatoria + i
+            console.log(`i:${i}, acumulador : ${sumatoria}`)
+        }
+
+        /* ACUMULADOR CON VALORES DE STRING */
+
+        /* Tipicamente es para filtrar palabras o letras. Por ejemplo la letra "e" */
+
+        /* Se utilizan mas que nada para acumular un nuevo texto sin ciertos caracteres o palabras. */
+        let texto = "Hola como estas? Todo bien, no?!, Porque?"
+        let acumulador = ""
+        for(let i = 0; i < texto.length; i++){
+            if(texto[i] != "e"){
+                acumulador += texto[i]
+            }
+        }
+        console.log(acumulador)
+
+        /* ACUMULADORES CON BOOLEANOS */
+        
+        let string = "Hol3"
+        //Tengo que demostrar que el string no tiene "A"
+
+        let bandera = true// significa que supongo que no tiene ninguna A hasta demostrar lo contrario. 
+        
+        for(let i = 0; i < string.length; i++){
+            if(string[i]=="a"){
+                bandera = false
+            }
+        }
+        console.log(bandera)
+
+
+
+    </script>
+</body>
+</html>

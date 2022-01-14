@@ -46,6 +46,7 @@
                 return index != itemToFilterIndex
             })
             lista = listaFiltrada
+            CargarLista()
         }
 
         /* En la interfaz agregar un elemento UL con id de valor "lista".
@@ -60,8 +61,17 @@
             elUl.innerHTML = ""
             for(let i = 0; i < lista.length; i++){
                 let elIl = document.createElement("li")
+
                 elIl.innerHTML = lista[i]
-                elIl.onclick = (i) => {filterItemByIndex(i)}
+                /* Creamos nuestro propie atributo */
+                elIl.setAttribute("data-i", i)
+                elIl.addEventListener("click", function(event){
+                    //Obtengo el elemento donde se hizo click
+                    let el = event.target
+                    //Saco el valor del index
+                    let i = el.getAttribute("data-i")
+                    filterItemByIndex(i)
+                })
                 elUl.appendChild(elIl)
             }
             

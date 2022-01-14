@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let array = [1,2,3]
+
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i])
+        }
+
+        let matrix = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+
+        //No es la mejor opcion console.log(matrix)
+        console.table(matrix)
+
+        for(let i = 0; i < matrix.length; i++){
+            //FILAS
+            for(let j = 0; j < matrix[i].length; j++){
+                //COLUMNA
+                //matrix[FILA][COLUMNA]
+                console.log(matrix[i][j])
+            }
+        }
+
+        matrix[0][2] = "Hola"
+        console.table(matrix)
+
+        /* ¿Para que se usa una matrix?
+
+        TABLAS DE  DOBLE ENTRADA,
+        TABLEROS DE JUEGO,
+        MAP CARTESIANO,
+        TABLA DE BASE DE DATOS,
+        
+        
+        */
+    </script>
+</body>
+</html>
