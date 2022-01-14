@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* 
+    Dado un array, crear y guardar en un nuevo array el resutlado de
+    filtrar todos los numeros que no sean pares.
+    2min 10.31AM
+    */
+
+    let array = [1,2,3,4,5,66,4,332,1,2,665,543]
+
+    let acumulador = []
+
+    for(let i = 0; i < array.length; i++){
+        let resto = array[i] % 2
+        if(resto == 0){
+            acumulador.push(array[i])
+        }
+    }
+    console.log(acumulador)
+
+    //Plantear un codigo equivalente al de arriba pero con el PARADIGMA FUNCIONAL (aplicarla funcion filter.) 2min 10.46
+    let acumuladorFuncional = array.filter((item) => (item % 2 == 0))
+    console.log(acumuladorFuncional)
+
+
+    </script>
+</body>
+</html>

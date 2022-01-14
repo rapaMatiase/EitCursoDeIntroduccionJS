@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>hola</li>
+        <li>chua</li>
+        <li>feo</li>
+        <li>lindo</li>
+    </ul>
+    <script>
+
+        /* Utilizando un selectorQueryAll obtener los li.
+        Cambiar el color de fondo de cada li dependiendo de si la posicion que ocupa en el array es par o impar.
+        Si es par, que sea de color rojo.
+        Si es imapr, que sea de color verde. 
+        3min 11.08
+        */
+
+        //1 - seleccionar los elemento del dom
+        let els = document.querySelectorAll("ul li")
+
+        for(let i = 0; i < els.length; i++){
+            let resto = i % 2
+            if( resto == 0){
+                els[i].style.backgroundColor = "red"
+            }else{
+                els[i].style.backgroundColor = "green"
+            }
+        }
+
+    </script>
+</body>
+</html>

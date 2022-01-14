@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Un array sin elementos.
+        let arrayVacio = []
+
+        //El siguiente array tiene 4 elementos.
+        let array = [1,2,3,4]
+
+        //Cuando hago referencia al arreglo con solo nombre, obtengo todo los elementos.
+        console.log(array)
+        //Cuando hago referencia al arreglo con el nombre y una posicion entre corchetes a continuacion, obtengo solo el elemento del array en esa posicion.
+        console.log(array[2])
+
+        //El array funciona como una variable mas.
+        array[2] = "Pepe"
+
+        console.log(array)
+
+        //Cuidado! Si hago lo siguiente, aplasto el array
+        //array = "jose"
+
+        /* 
+        Un array se utiliza para represtar;
+        - Listas
+        - Conjuntos
+        */
+
+        //Los for estan justamente pensados para recorrec estructuras complejas como los arrays
+        for (let i = 0; i < array.length; i++) {
+            console.log(`i:${i} -> array[${i}] = ${array[i]}`)
+        }
+
+        //ACUMULADOR CON ARRAY
+        let acumulador = []
+        for (let i = 0; i < array.length; i++) {
+            if(array[i] > 2){
+                acumulador.push(array[i])
+            }
+        }
+        console.log(acumulador)
+
+
+        
+
+    </script>
+</body>
+</html>
