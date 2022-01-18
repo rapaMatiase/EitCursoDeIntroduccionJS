@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html, body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        .tableroTateti{
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+            height: 50vh;
+            width: 50vh;
+        }
+
+        section{
+            border: 1px solid orange;
+        }
+
+    </style>
+</head>
+<body onload="CargarJuego()">
+    <p > TURNO :  <span id="panel_turno"></span></p>
+    <article id="tableroDeTateti" class="tableroTateti">
+        <section data-x="0" data-y="0"></section>
+        <section data-x="0" data-y="1"></section>
+        <section data-x="0" data-y="2"></section>
+        <section data-x="1" data-y="0"></section>
+        <section data-x="1" data-y="1"></section>
+        <section data-x="1" data-y="2"></section>
+        <section data-x="2" data-y="0"></section>
+        <section data-x="2" data-y="1"></section>
+        <section data-x="2" data-y="2"></section>
+    </article>
+    <p> RESULTADO <span id="panel_resultado"></span></p>
+    <button id="replay"> Replay</button>
+    <script src="script.js"></script>
+    <script>
+
+        let elSections = document.querySelectorAll("#tableroDeTateti section")
+
+        for(let i = 0 ; i < elSections.length; i++){
+
+            elSections[i].addEventListener("click", function(event){
+                let elTarget = event.target
+
+                let x = elTarget.getAttribute("data-x")
+                let y = elTarget.getAttribute("data-y")
+
+                play(x,y, elTarget)
+            })
+        }
+
+        // HAY ALGO QUE ESTA MAL ARMADO EN LOAD, POR ESO NO LO TOMA.
+        // document.addEventListener("load", function(){
+        //     CargarJuego()
+        //     console.log("PASO")
+        // })
+
+    </script>
+</body>
+</html>

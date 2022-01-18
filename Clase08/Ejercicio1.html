@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <button id="button"> SUMAR</button>
+    <p id="resultado"></p>
+
+    <script>
+
+        /* Crear un programa que al hacer click en el boton de id button, tome los valores de los dos input, los sume y muestre en el p de id resultado.
+        3min 21.12  */
+
+        //PASO 1 - Hacer todas las peticiones al dom
+        const EL_INPUT_NUMBER_1 = document.getElementById("number1")
+        const EL_INPUT_NUMBER_2 = document.getElementById("number2")
+        const EL_BUTTON = document.getElementById("button")
+        const EL_P = document.getElementById("resultado")
+
+        //PASO 2 - El evento
+        EL_BUTTON.addEventListener("click", function(){
+
+
+            //PASO 3 - Obtener los valroes de los inpuit
+            let numeroUnoIngresado = EL_INPUT_NUMBER_1.value
+            let numeroDosIngresado = EL_INPUT_NUMBER_2.value
+
+            //PASO 4 - Convierto a valor numerico
+            let numeroUnoConvertido = parseInt(numeroUnoIngresado)
+            let numeroDosConvertido = parseInt(numeroDosIngresado)
+
+            //PASO 5 - Opero
+            let resultadoDeLaSuma = Sumar(numeroUnoConvertido, numeroDosConvertido)
+
+            //PASO 6 - Muestro el resultado en pantalla
+            EL_P.innerHTML = resultadoDeLaSuma
+        })
+
+        function Sumar(a,b){
+            return a + b
+        }
+    </script>
+</body>
+</html>

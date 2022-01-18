@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="name">
+    <button id="boton"> CLICK ME</button>
+
+    <script>
+
+        const EL_INPUT = document.getElementById("name")
+        const EL_BOTON = document.getElementById("boton")
+
+        
+        function saludoar(){
+            let textoIngresador = EL_INPUT.value
+            alert(`Hola, ${textoIngresador}`)
+        }
+
+        EL_BOTON.addEventListener("click", function(){
+            saludoar()
+        })
+    </script>
+</body>
+</html>

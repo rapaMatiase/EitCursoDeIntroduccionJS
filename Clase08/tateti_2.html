@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html, body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        .tableroTateti{
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+            height: 50vh;
+            width: 50vh;
+        }
+
+        section{
+            border: 1px solid orange;
+        }
+
+    </style>
+</head>
+<body onload="CargarJuego()">
+    <p > TURNO :  <span id="panel_turno"></span></p>
+    <article id="tableroDeTateti" class="tableroTateti">
+      
+    </article>
+    <p> RESULTADO <span id="panel_resultado"></span></p>
+    <button id="replay"> Replay</button>
+    <script src="script_2.js"></script>
+    <script>
+
+       
+
+    </script>
+</body>
+</html>

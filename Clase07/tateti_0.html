@@ -78,11 +78,15 @@
                 tableroTateti[i][j] = turno
                 cantidadDeTurno++
 
+
+
+                //GANADOR
                 let hayGanadorEntoncesSeTerminoElJuego = hayGanador()
                 if(hayGanadorEntoncesSeTerminoElJuego){
                     console.log(`Hay un ganador. ${turno}`)
                 }
-                
+
+                //EMPATE
                 let noHayGanador = !hayGanadorEntoncesSeTerminoElJuego
                 if(!noHayGanador && cantidadDeTurno == tableroTateti.length){
                     console.log("Es un empate")
