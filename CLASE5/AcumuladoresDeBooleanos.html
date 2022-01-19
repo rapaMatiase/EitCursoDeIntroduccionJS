@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Todos los numeros son positivos */
+        let array = [1,-4,2,7,-2]
+        /* Con econtrar un numero negativo, es suficiente */
+
+        let banderaSonTodosPositivos = true //Hasta encuentre uno negativo, supongo que todos cumplen.
+        for (let i = 0; i < array.length; i++) {
+            if(array[i] < 0){
+                banderaSonTodosPositivos = false
+                break //Interrumpi el ciclo aca
+            }
+        }
+        console.log(banderaSonTodosPositivos)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let matrix = [
+            [1,2,3],
+            [4,5,6],
+            [4,3,2]
+        ]
+
+        /* Dada una matrix, hacer la sumaatoria de todos sus elementos. 2 min 10.41 */
+
+        let acumulador = 0
+        //El primer matrix.length coinside con la cantidad de filas que tiene la matrix.
+        //El segundo matrix[i].length coniside con la canitdad de columnas que tiene la fila donde estyoy ubicado
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                acumulador += matrix[i][j]
+            }
+        }
+        console.log(acumulador)
+    </script>
+</body>
+</html>

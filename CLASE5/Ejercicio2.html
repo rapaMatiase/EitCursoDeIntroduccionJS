@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Dado un array de longitud 3 fija, determinar si todos sus elementos son distintos entre si son distintos a 0.
+        Ejemplos
+        
+        let array = [1,0,3]
+        No son distintos.
+        
+        let array = [1,3,3]
+        No son distintos
+
+        let array = [1,5,3]
+        Son distintos.
+
+        2min 10.16
+        NO USAR FOR, SOLO IF.
+        */
+
+        let array = [1,5,3]
+
+        if(array[0] != array[1] && array[0] != array[2] && array[1] != array[2] && array[0] != 0 && array[1] != 0 && array[2] != 0){
+            console.log("Son distintos")
+        }else{
+            console.log("No son distintos")
+        }
+    </script>
+</body>
+</html>

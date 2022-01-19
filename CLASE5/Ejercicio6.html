@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Dada una matrix determinar si cada columna de la misma esta compuesta por elementos iguales.
+        
+        Por ejemplo
+        
+        let matrix = [
+            [1, 1, 1],
+            [4, 5, 1],
+            [4, 2, 1]
+        ]
+        
+        1) No son iguales
+        2) No son iguaels
+        3) Son iguales
+        */
+        let matrix = [
+            [1, 1, 1],
+            [4, 5, 1],
+            [4, 2, 1]
+        ]
+
+        for (let j = 0; j < matrix.length; j++) {
+            if(matrix[0][j] == matrix[1][j] && matrix[0][j] == matrix[2][j]){
+                console.log("Son iguales")
+            }else{
+                console.log("Son distintos")
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
