@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Sintaxis de una funcion
+
+        function nombre(argumentos o parametros){
+            //Aca resuelvo el probelma
+
+
+            return VALOR_A_RETORNAR
+        }
+        
+        */
+
+        //Una funcion de suma tal que;
+        // - ENTRADA: dos numeros
+        // - SALIDA : un numero
+
+        function suma(a, b){ // equivale a hacer let a, b
+            let suma = a + b
+            return suma
+        }
+
+        //Tengo que invocar o llamar a la funcion para utilizarla
+        // let resultado = suma(8, 2)
+        // console.log(resultado)
+
+        //MALA PRACTICA - dar mensajes dentro de las funciones, porque puede hacer menos reutilizable la misma.
+        
+        function suma2(a,b){
+            let suma = a + b
+            console.log(suma)
+        }
+
+        //MALA PRACTICA - utilizar variabels globales sin control
+        let a = 2
+        let b = 4
+        function suma3(){
+            let suma = a + b
+            return suma
+        }
+
+
+    </script>
+</body>
+</html>

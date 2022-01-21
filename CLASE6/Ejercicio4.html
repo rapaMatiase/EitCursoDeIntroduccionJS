@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        /* 
+            PARTE 1
+            Dado un array, mostrar en pantalla los valores de este que sean mayor a 10.
+            2min 11.40
+        */
+
+        // let array = [1,2,66,2,3,55,1,233,21,7,823,55]
+
+        // for (let i = 0; i < array.length; i++) {
+        //     if(array[i] > 10){
+        //         console.log(array[i])
+        //     }
+        // }
+
+        /* 
+        PARTE 2
+        Crear una funcion que recibe un numero y devulve un booleano dependiendo de si el valor es mayor que 10.
+
+        Utilizar la funcion para remplazar la condicion logica en el if.
+
+        2min 11.44
+        */
+        
+        
+        function esMayorDe10(numero){
+            /* El problema con esta implementacion es que tengo dos if anidados (donde llamao la funcion y este abajo) y ademas dos valores hardcodeados.  */
+            if(numero > 10){
+                return true
+            }else{
+                return false
+            }
+        }
+
+        //Priemra mejora - Tener solo un return 
+        function esMayorDe10_version2(numero){
+            /* Sigo teniendo el problema del hardcodeo y los dos if anidados. */
+            let bandera = false //Supongo que el numero es menor hasta demostrar lo contrario
+            if(numero > 10){
+                bandera = true
+            }
+            return bandera
+        }
+
+        function esMayorDe10_version3(numero){
+            return numero > 10
+        }
+
+        let array = [1,2,66,2,3,55,1,233,21,7,823,55]
+
+        for (let i = 0; i < array.length; i++) {
+            if(esMayorDe10(array[i]) == true){
+                console.log(array[i])
+            }
+        }
+    </script>
+</body>
+</html>
