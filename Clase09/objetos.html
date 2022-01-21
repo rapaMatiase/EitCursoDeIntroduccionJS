@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Obejto literal
+        let objetoAlumno = {
+            //clave : valor
+
+            //Propiedades o atributos
+            nombre : "Matias",
+            apellido : "rapa",
+            github : "rapamatiase",
+            amigos : [
+                {nombre : "Juan"},
+                {nombre : "Fatima"}
+            ],
+            //Metodos
+            
+            darPerfil : function(){
+                console.log(`El perfil es ${this.github}`)
+            },
+            saludar : function(){
+                this.darPerfil()
+                return `Hola!`
+            }
+        }
+
+        console.log(objetoAlumno.apellido)
+
+        objetoAlumno.apellido = "rapa2"
+
+        console.log(objetoAlumno.apellido)
+
+    </script>
+</body>
+</html>

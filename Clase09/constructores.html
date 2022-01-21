@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Una variable numerica es un objeto del tipo numerico. 
+        let numero = 2 
+        // otra forma de crear un numero es
+        let numeroOtro = new Int32Array(3)
+
+        //FORMA CLASICA
+        class Alumno{
+            constructor(_nombre, _apellido){
+                this.nombre = _nombre
+                this.apellido = _apellido
+                this.cursos = []
+            }
+
+            addCurso(nombreDeCurso){
+                this.cursos.push(nombreDeCurso)
+            }
+        }
+
+        let alumno = new Alumno("Matias", "rapa")
+
+        //Funciones
+        function Alumno2(_nombre, _apellido){
+            this.nombre = _nombre
+            this.apellido = _apellido
+            this.cursos = []
+
+            this.addCurso = function(){
+                this.cursos.push(nombreDeCurso)
+            }
+        }
+
+        let Alumno2 = function (_nombre, _apellido){
+            this.nombre = _nombre
+            this.apellido = _apellido
+            this.cursos = []
+
+            this.addCurso = function(){
+                this.cursos.push(nombreDeCurso)
+            }
+        }
+
+    </script>
+</body>
+</html>

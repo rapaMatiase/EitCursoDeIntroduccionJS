@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* Crear un objeto que represente una mascota y tiene las porpiedades del nombre, raza, especia, edad, y dueño. Se sabe el nombre y apellido del dueño.
+        2min 20.26
+        
+        */
+        let mascotaObjeto = {
+            nombre: "luke",
+            raza: "whyppet",
+            edad: 1.2,
+            cliente: { nombre: "Matias", apellido: "Rapa" },
+
+            saludar : function(){
+                console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`)
+            },
+            deQuienSoy : function(){
+                console.log(`Yo soy de ${this.cliente.nombre} `)
+            },
+        }
+
+        /* Crear un metodo en mascota, tal que devuelva en pantalla el mensaje : "Hola, soy ... y tengo ... años." 
+        2min 20.31HS
+        */
+    </script>
+</body>
+
+</html>
