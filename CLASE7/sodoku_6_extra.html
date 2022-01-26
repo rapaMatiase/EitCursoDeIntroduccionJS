@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        
+
+        /* CONSTANTES  */
+        const VALOR_VACIO = 0
+        const VALOR_INICIAL = 1
+        const VALOR_MAXIMO = 3
+        /* VARIABLES GLOBALES */
+        let tableroSodoku = [
+            [VALOR_VACIO,1,3],
+            [2,VALOR_VACIO,1],
+            [3,1,VALOR_VACIO]
+        ]
+        //GameOver por defualt es false porque el jeugo no puede terminar antes de comenzar.
+        let gameOver = false 
+
+        function llegoAlValorLimiteDeUnaCasilla(i,j){
+            return tableroSodoku[i][j] < VALOR_MAXIMO
+        }
+
+        function volverAlValorIncial(i,j){
+            tableroSodoku[i][j] = VALOR_INICIAL
+        }
+
+        function addNumber(i, j){
+            if(llegoAlValorLimiteDeUnaCasilla(i,j) == true){
+                tableroSodoku[i][j]++
+            }else{
+                volverAlValorIncial(i,j)
+            }
+        }
+        
+        function hayRepetidosEnElArray(fila){
+            //Controlo solo un array, entonces solo tengo una dimension.
+            return fila[0] == fila[1] || fila[0] == fila[2] || fila[1] == fila[2] || fila[0] == VALOR_VACIO || fila[1] == VALOR_VACIO || fila[2] == VALOR_VACIO 
+        }
+
+        function noHayRepetidosEnElArray(fila){
+            return !hayRepetidosEnElArray(fila)
+        }
+
+        function hayRepetidosEnAlgunaFila(){
+            let banderaSinRepetidosEnLasFilas = true
+            for (let i = 0; i < tableroSodoku.length; i++) {
+                    banderaSinRepetidosEnLasFilas = noHayRepetidosEnElArray(tableroSodoku[i])
+            }
+            return banderaSinRepetidosEnLasFilas
+        }
+
+        function hayRepetidosEnAlgunaColumna(){
+            let banderaSinRepetidosEnLasColumnas = true
+            for (let j = 0; j < tableroSodoku.length; j++) {
+                let columnaToArray = [
+                tableroSodoku[0][j],
+                tableroSodoku[1][j],
+                tableroSodoku[2][j]
+                ]
+                banderaSinRepetidosEnLasColumnas = noHayRepetidosEnElArray(columnaToArray)
+            }
+            return banderaSinRepetidosEnLasColumnas
+        }
+        /* 
+        paso 3
+        Intentar hacer el mismo planteo pero para las columnas
+        3min 10.46.
+        */
+
+        console.table(tableroSodoku)
+
+        do{
+
+            //Solicitamos las coordenadas para jugar
+            let coordX = prompt("Ingrese la coordenada en x")
+            let coordXConvert = parseInt(coordX)
+
+            let coordY = prompt("Ingrese la coordenada en y")
+            let coordYConvert = parseInt(coordY)
+        
+
+            
+            addNumber(coordXConvert, coordYConvert)
+
+            /* paso 1
+            Convertir a funcion los dos if con for que controlan los repetidos en filass y columnas. Crear dos funciones separadas.
+            3min 10.33
+            */
+           
+            //Controlamos los repetidos en filas
+            let banderaSinRepetidosEnLasFilas = hayRepetidosEnAlgunaFila()
+
+            //Controlamos los repetidos en columnas
+            let banderaSinRepetidosEnLasColumnas = true
+            
+            
+            //Ya gano?
+            gameOver = banderaSinRepetidosEnLasFilas && banderaSinRepetidosEnLasColumnas
+            
+            console.table(tableroSodoku)
+            
+            console.log(gameOver)
+        }while(!gameOver == true);
+        //No hay gameOver entonces sigamos jugando!!!
+</script>
+</body>
+</html>

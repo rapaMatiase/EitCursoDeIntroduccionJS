@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Por la propiedad correspondiente al evetno. -->
+    <button onclick="alertame()"> Click </button>
+    <!-- Utilizando un selector de elemetos de js -->
+    <button id="btnClick"> Clikme</button>
+    <p id="texto"> Hola </p>
+    <script>
+        function alertame(){
+            alert("Estas alaertado")
+        }
+
+        let elBtn = document.getElementById("btnClick")
+        elBtn.addEventListener("click", function(event){
+            console.log(event)
+            let elemento = event.target
+            console.log(elemento)
+            elemento.style.backgroundColor = "red"
+            alertame()
+        })
+
+        document.addEventListener("mousemove", function(event){
+            console.log(`x : ${event.clientX}, y:${event.clientY}`)
+        })
+    </script>
+</body>
+</html>
