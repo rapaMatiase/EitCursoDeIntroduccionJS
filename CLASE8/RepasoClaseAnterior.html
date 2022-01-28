@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p id="texto">Hola</p>
+    <script>
+        //Un elemento en particular por el id
+        let unElementoPorId = document.getElementById("texto")
+        //Cuando entro
+        unElementoPorId.addEventListener("mouseenter", function(event){
+            let element = event.target
+            element.style.backgroundColor = "Blue"
+        })
+        //Cuando salgo
+        unElementoPorId.addEventListener("mouseleave", function(event){
+            let element = event.target
+            element.style.backgroundColor = "white"
+        })
+
+        //Varios elementos por selectQueryAll
+        let variosElementos = document.querySelectorAll("p")
+        for(let i = 0 ; i < variosElementos.length; i++){
+            //Cuando entro
+            variosElementos[i].addEventListener("mouseenter", function(event){
+                let element = event.target
+                element.style.backgroundColor = "Blue"
+                element.innerHTML = "Entre"
+            })
+            //Cuando salgo
+            variosElementos[i].addEventListener("mouseleave", function(event){
+                let element = event.target
+                element.style.backgroundColor = "white"
+                element.innerHTML = "Sali"
+            })
+        }
+
+    </script>
+
+</body>
+</html>

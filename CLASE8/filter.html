@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let array = [1,2,-23,2,42,-53]
+
+        //Filtrar
+        // let resultado = array.filter((element)=>{
+        //     return element > 0
+        // })
+        // console.log(resultado)
+
+        //Filtrar
+        // resultado = array.filter((element)=>{
+        //     return element < 0
+        // })
+        // console.log(resultado)
+
+        /* 
+        
+        let arrayResultado = array.filter((elemnt)=>{
+            return condicionLogica;
+        })
+
+        function nombre(PARAMETROS){
+            //segmento de codigo
+            return RESULTADO;
+        }
+
+        let nombre = (PARAMETROS) =>{
+            //segmento de codigo
+            return RESULTADO;
+        }
+        */
+
+        /* PARTE 2 */
+
+        let resultado = array.filter((element, index, array)=>{
+            return index > 2
+        })
+        console.log(resultado)
+
+
+        /* 
+        TODOS LOS METODOS DE ARRAY RECIBEN POR DEFUALT TRES PARAMETROS;
+        - EL ELEMETNO EN IS
+        - EL INDEX DE ESE ELEMENTO
+        - EL ARRAY
+        let nombre = (element, index, array) =>{
+            //segmento de codigo
+            return RESULTADO;
+        }
+        */
+    </script>
+</body>
+</html>

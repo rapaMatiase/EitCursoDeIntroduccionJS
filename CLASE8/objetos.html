@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html{
+            height: 100%;
+
+        }
+    </style>
+</head>
+<body id="body" >
+    
+
+    <script>
+        document.getElementById("body").addEventListener("click", function(event){
+            console.log(event)
+        })
+        let nombre = "jorge"
+        let objetoPersona = {
+            //nombre : valor
+            //ATRIBUTOS
+            nombre : "matias",
+            apellido : "rapa",
+            edad : 29,
+            comidasFavoritas : ["carne", "atun", "pollo"],
+            //METODOS
+            presentarMe : function(){
+                /* El THIS indica que es el nombre dentro de mi objeto y no uno fuera de este. Si no existe una variable con el mismo nombre del atributo tira error. */
+                console.log(`Hola, soy ${this.nombre} y tengo ${this.edad}`)
+            },
+
+        }
+
+        //JSON = array de objetos
+
+        let JSON = {
+            token : "sdfasosfmalsddmfeo323",
+            data : [
+                {id : 2, nombre : "Celular", precio : 220233},
+                {id : 3, nombre : "Pepel", precio : 223},
+                {id : 4, nombre : "Microfono", precio : 6666},
+                {id : 5, nombre : "Computadora", precio : 764429},
+            ]
+        }
+
+        let ejemplo = [
+                {id : 2, nombre : "Celular", precio : 220233},
+                {id : 3, nombre : "Pepel", precio : 223},
+                {id : 4, nombre : "Microfono", precio : 6666},
+                {id : 5, nombre : "Computadora", precio : 764429},
+            ]
+
+        for(let i = 0; i < ejemplo.length; i++){
+            //array[POSITION].ATRIBUTO
+            console.log(`${ejemplo[i].id}, ${ejemplo[i].nombre}`)
+        }
+
+    </script>
+</body>
+</html>

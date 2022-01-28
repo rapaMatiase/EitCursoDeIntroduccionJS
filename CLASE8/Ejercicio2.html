@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Dado un array de numeros, filrar todo los numeros que son pares. Solo dejar los impares. 2min 10.52
+        let resultado = numeor % 2, si es igual 0 es par.
+        */
+        let array = [1,4,2,3,11,45,22,77,479,465]
+
+        let resutlado = array.filter((element)=>{
+            let resto = element % 2
+            return resto != 0
+        })
+        console.log(resutlado)
+    </script>
+</body>
+</html>

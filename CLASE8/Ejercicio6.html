@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+
+    </ul>
+    <script>
+        /* Refactorizar el codigo de abajo tal que ahora se filtre por el id en vez de la posicion. 
+        2min 11.55
+        */
+        let array = [
+            {id : 1, detalle : "item 1"}, 
+            {id : 2, detalle : "Item 2"}, 
+            {id : 3, detalle : "Item 3"}
+        ]
+
+        let elUl = document.getElementById("lista")
+        for(let i = 0; i < array.length; i++){
+            let newElement = document.createElement("li")
+            newElement.innerHTML = array[i].detalle
+            newElement.setAttribute("data-index", array[i].id)
+            newElement.addEventListener("click", function(event){
+                //Saco el elemento del evento
+                let element = event.target
+                //Sco el valor del atributo del elemento
+                let dataIndex = element.getAttribute("data-index")
+                //Muesto en consola
+                array = array.filter((element)=>{
+                    return element.id != dataIndex
+                })
+                console.log(array)
+            })
+            elUl.appendChild(newElement)
+        }
+
+    </script>
+</body>
+</html>
