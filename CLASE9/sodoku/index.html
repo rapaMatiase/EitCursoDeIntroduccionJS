@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <input type="number" data-i="0" data-j="0" >
+        <input type="number" data-i="0" data-j="1" >
+        <input type="number" data-i="0" data-j="2" >
+        <input type="number" data-i="1" data-j="0" >
+        <input type="number" data-i="1" data-j="1" >
+        <input type="number" data-i="1" data-j="2" >
+        <input type="number" data-i="2" data-j="0" >
+        <input type="number" data-i="2" data-j="1" >
+        <input type="number" data-i="2" data-j="2" >        
+    </div>
+    <label id="desboard"></label>
+    <script src="js/script.js"></script>
+    <script>
+        
+        let casilllas = document.querySelectorAll("input")
+        for(let i = 0; i < casilllas.length ; i++){
+            const input = casilllas[i]
+            //AGREGAMOS EL VALOR POR DEFAULT
+            let x = input.getAttribute("data-i")
+            let y = input.getAttribute("data-j")
+            input.value = tableroSodoku[x][y]
+            //EVENTO CLICK
+            input.addEventListener("click", function(event){
+                let element = event.target
+                //Utilizo getAttribute para cuando quiero obtener datos de un atributo que yo creo.
+                let i = element.getAttribute("data-i")
+                let j = element.getAttribute("data-j")
+
+                let resutlado = play(i, j)
+                //Esto significa que el valor del input en el HTML sea igual al valor de la variable resultado.
+                element.value = resutlado
+            })
+            // casilllas[i].addEventListener("keypress", function(event){
+            //     //El elemento
+            //     let element = event.target
+            //     //Obtengo el caracter ingresado
+            //     let caracterCode = event.keyCode
+            //     let caracter = String.fromCharCode(caracterCode)
+            //     let number = parseInt(caracter)
+            //     console.log(caracter)
+            // })
+        }
+    </script>
+</body>
+</html>
