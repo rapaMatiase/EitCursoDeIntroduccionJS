@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            CONCADENACION
+
+            Yuxtaposicion de los caracteres de un string a continuacion de otro string.
+
+            Si concadeno "Hola" y "¿Como estas?" queda "Hola¿Como estas?"
+         */
+
+        let textoA = "Hola"
+        let textoB = "¿Como estas?"
+        let nombre = "Matias"
+        // E6 o +
+        let concadenacion = `${textoA} ${nombre}, ${textoB}`
+        console.log(concadenacion)
+
+        //Antes de E6
+        let concadenacionVieja = textoA + ", " + textoB
+        console.log(concadenacionVieja)
+
+        /* 
+        CANTIDAD DE CARACTERES
+
+        Tenemos una funcion nativa para los string que me dice cuantos caracteres tiene un string
+         */
+
+        let cantidadDeCaracteres = textoA.length
+        console.log(cantidadDeCaracteres)
+
+        /* 
+        USO DE COMILLAS EN JS
+
+        "" -> Textos o String
+        '' -> Textos o String
+        `` -> Concadenacion
+
+        pero si yo quiero tener un texto con comillas dentro?
+        Entonces " '' "
+         */
+
+        let textoConComillas = "Hola, el dijo 'no' "
+        //let textoConComillas2 = ' hola, el dijo "" ' No RECOMENDAMBLE 
+    </script>
+</body>
+</html>

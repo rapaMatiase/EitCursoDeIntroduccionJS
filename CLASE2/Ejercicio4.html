@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        Realizar un programa que ;
+        1) Solicite al usuario un numero por un PROMPT y lo guarde en una variable.
+        2) Solicitar otro numero al usuario por otro PROMPT y guardarlo en otra variable.
+        3) Hacer la suma de los dos numeros y guardar en una nueva variable  el resultado.
+        4) Mostrar el resultado en consola. El resultado,¿Es el esperado?
+        2min 11.26
+         */
+
+        /* 
+        PARTE 2
+        Refactorizar el codigo utilizando la funcion nativa NUMBER para convertir en tipo numerico el ingreso del usuario.
+        1.2) Utilizando la funcion NUMBER guardar en una nueva variable el resultado de conviertir el primer ingreso del usuario en tipo numerico.
+        2.2) Utilizando la funcion NUMBER guardar en una nueva variable el resultado de conveirtir el segundo ingreso del usuario en tipo numerico.
+        3) Hacer la suma con las variables con los valores convertidos a numeros.
+        3min 11.39AM
+        */
+
+        //1
+        let numeroUnoIngresado = prompt("Ingrese un numero")
+        //1.2
+        let numeroUnoConvertido = Number(numeroUnoIngresado)
+        //2
+        let numeroDosIngresado = prompt("Ingrese otro numero")
+        //2.2
+        let numeroDosConveritdo = Number(numeroDosIngresado)
+        //3
+        let suma = numeroUnoConvertido + numeroDosConveritdo
+        //4
+        console.log(suma)
+
+        //RESOLUCION COMPAÑERO
+        //let resultado = Number(numero1) + Number(numero2)
+        //Si me llega a tirar errro esta linea, ¿Quien es el responsable? El ingreo en numero1 o numero2, la convercion dle numero1 o numero2, o la operacion de la suma.
+        //NO ES ESCALABLE, no puedo agregar ninguna operacion o control entre la convercion y la suma.
+
+    </script>
+</body>
+
+</html>
