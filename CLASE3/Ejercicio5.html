@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Realizar un programa que :
+        1) Solicite al usuario su edad con un prompt y lo guarde en una variable.
+        2) Converir ese ingreso a tipo numerico con la funcion NUMBER y guardar en otra variable.
+        3) Crear la condicion logica para determinar si la persona puede votas o no. Se puede votar si tener mas 18 o mas años.
+        4) Determinar;
+        - Si tiene menos de 16, no puede votar.
+        - Si tiene 16 o 17, puede votar pero no es obligatorio. 
+        - Si tiene 18 o mas, puede votar y es obligatorio.
+        - Si tiene 65 o mas, puede votar pero no es obligatorio.
+        3min 11.37
+         */
+
+         //1
+        let edadIngresada = prompt("Ingrese su edad")
+         //2
+        let edadConvertida = Number(edadIngresada)
+         //3 y 4
+        if(edadConvertida < 16){
+            console.log("No podes votar")
+        }else if(edadConvertida == 16){
+            console.log("Podes votar pero no es obligatorio")
+        }else if(edadConvertida == 17){
+            console.log("Podes votar pero no es obligatorio")
+        }else if(65 <= edadConvertida){
+            console.log("Podes votar pero no es obligatorio")
+        }else if ( 18 <= edadConvertida){
+            console.log("debes votar")
+        } 
+    </script>
+</body>
+</html>

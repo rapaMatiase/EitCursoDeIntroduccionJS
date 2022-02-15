@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        /* Solicitar al usuario su edad y determinar cual corresponde;
+        - Si es menor de 17 años, no puede sacara el resigtro
+        - Si tiene 17 años o mas puede sacarlo con el permiso de sus padres.
+        - Si tiene 18 años o mas puede sacarlo. 
+        Controlar que el valor ingresado se mayor que 0.
+        */
+        
+        //1 - Solicito la edad
+        let edadIngresado = prompt("Ingrese un numero")
+        //2 - La convierto a tipo numerico
+        let edadConveritdo = Number(edadIngresado)
+        //3 - Deterino si es mayor de edad
+        if(0 < edadConveritdo){
+            if(edadConveritdo < 17){
+                console.log("No lo puede sacar")
+            }else if (17 == edadConveritdo){
+                console.log("Lo podesscar con el permitso de tus padres")
+            }else if(18 <= edadConveritdo){
+                console.log("Lo podes sacar.")
+            }
+        }else{
+            console.log("Debe ingresar un valor mayor que 0.")
+        }
+    </script>
+</body>
+</html>
