@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        /* Solicitar al usuario su edad. Si es mayor de 18 puede sacar el registro, si no, no puede sacarlo. */
+        
+        //1 - Solicito la edad
+        let edadIngresado = prompt("Ingrese un numero")
+        //2 - La convierto a tipo numerico
+        let edadConveritdo = Number(edadIngresado)
+        //3 - Deterino si es mayor de edad
+        if (18 <= edadConveritdo) {
+            //Segmento de Codigo
+            console.log("Sos mayor de edad 🧑")
+        }else{
+            console.log("Sos menor de edad 👦")
+        }
+
+    </script>
+</body>
+</html>

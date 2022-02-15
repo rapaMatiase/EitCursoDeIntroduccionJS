@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Realizar un programa que :
+        1) Solicite al usuario su edad con un prompt y lo guarde en una variable.
+        2) Converir ese ingreso a tipo numerico con la funcion NUMBER y guardar en otra variable.
+        3) Utilizar el operador de relacion correspondiente para obtener un true, si la edad ingresada es mayor o igual a 18 años.
+        4) Mostrar el resultado en consoal. 
+        2min 10.44a,
+         */
+
+         //1
+         let edadIngresada = prompt("Ingrese su edad")
+         //2
+         let edadConvertida = Number(edadIngresada)
+         //3
+         let esMayorDeEdad = 18 <= edadConvertida
+         //17 < edadConvertida
+         // edadConvertida >= 18
+         //4
+         console.log(esMayorDeEdad) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        Realizar un progamrama que ;
+        1) Solicite al usuario su nombre por un prompt y lo guarde en una variable.
+        2) Solicite al usuario su edad con otro prompt y lo guarde en otra vairable.
+        3) Solicitar al usuario con un confirm, si acepta los terminos y condiciones de esta pag.
+        4) Mostrar por consola un mensaje que diga "Usted NOMBRE, de AÑOS años, y su respusta fue : RESPUESTA."
+        2min 10.17
+         */
+
+        //1
+        let nombreIngresado = prompt("Ingrse su nombre")
+        //2
+        let edadIngresada = prompt("Ingrese su edad")
+        //3
+        let terminosCondiciones = confirm("Acepta los terminos y condiciones?")
+        //4
+        let mensaje = `Usted ${nombreIngresado}, de ${edadIngresada} años, y su respuesta fue ${terminosCondiciones} `
+        console.log(mensaje)
+
+    </script>
+</body>
+</html>

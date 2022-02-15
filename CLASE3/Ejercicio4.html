@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Realizar un programa que :
+        1) Solicite al usuario su edad con un prompt y lo guarde en una variable.
+        2) Converir ese ingreso a tipo numerico con la funcion NUMBER y guardar en otra variable.
+        3) Crear la condicion logica para determinar si la persona puede votas o no. Se puede votar si tener mas 18 o mas años.
+        4) Si puede votar indicar en pantalla con un mensaje, si no, mostrar uno indicando que no puede votar
+        2min 11.11
+         */
+
+         //1
+         let edadIngresada = prompt("Ingrese su edad")
+         //2
+         let edadConvertida = Number(edadIngresada)
+         //3 y 4
+        if (18 <= edadConvertida) {
+            console.log("Usted puede ir a votar")
+        }else{ //Defualt, porque en todos los casos que la condicion es falsa, se ejecuta el else.
+            console.log("Usted no puede ir a votar aun")
+        }
+    </script>
+</body>
+</html>
