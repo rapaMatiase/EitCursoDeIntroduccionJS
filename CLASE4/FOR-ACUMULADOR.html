@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Es la sumatoria de los numeros 1 al 9
+
+        /* ACUMULADOR DE NUMEROS */
+
+        // let sumatoria = 0 //Es iagual a 0 porque es el elemento neutro para la suma
+        // for(let i = 1; i <  10; i++){
+        //     sumatoria = sumatoria + i
+        //     console.log(`i:${i}, acumulador:${sumatoria}`)
+        // }
+
+        /* ACUMULADOR DE STRINGS */
+        
+        // let acumulador = "" //comillas sin espacio es el elemento neutro de la concadenacion
+        // for(let i = 0; i < 5; i++){
+        //     acumulador = acumulador + "a"
+        // }
+        // console.log(acumulador)
+
+        // let acumulador = "" 
+        // for(let i = 0; i < 5; i++){
+        //     let ingreso = prompt("Ingrese algo")
+        //     acumulador = acumulador + ingreso
+        // }
+        // console.log(acumulador)
+        
+        let texto = "La Dirección General de Migración y Extranjería trabaja bajo los principios del Pacto Mundial para una migración ordenada, segura, regular y, sobre todo, digna, comprometida con el otorgamiento de visas, para generar un procedimiento que priorice el ingreso de personas con vinculo en primer grado de consanguinidad y desde nuestros Consulados visas consulares para emergencias e interés público”, indica un comunicado oficial"
+        let acumuladoPorFiltro = "" 
+        for(let i = 0; i < texto.length; i++){
+            if(texto[i] != "a" && texto[i] != "c"){
+                acumuladoPorFiltro = acumuladoPorFiltro + texto[i]
+            }
+        }
+        console.log(acumuladoPorFiltro)
+    </script>
+</body>
+</html>

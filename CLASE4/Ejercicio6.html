@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Dado un texto, crear un nuevo texto pero donde el texto original tiene a remplazar en el nuevo por una x.
+        3min 11.50 */
+        let texto = "Bajo la nueva disposición"
+        let acumulador = ""
+        for(let i = 0; i < texto.length ; i++){
+            if(texto[i] != "a"){
+                acumulador = acumulador + texto[i]
+            }else{
+                acumulador = acumulador + "x"
+            }
+        }
+        console.log(acumulador)
+    </script>
+</body>
+</html>

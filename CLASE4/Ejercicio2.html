@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        Realizar un programa que solicite un numero al usaurio y determine si es positivo o negativo. Cuidado, el 0 no tiene signo. 
+        Controlar que el usuario ingreso algo convertible a numero, si no mostrar un mensaje agresivo.
+        2min 10.45
+         */
+        //1
+        let numeroIngresado = prompt("Ingrese un numero")
+        //2
+        let numeroConvertido = Number(numeroIngresado)
+        //4
+        let isNotNaN = !isNaN(numeroConvertido)
+
+        if(isNotNaN == true){
+            //3
+            if(numeroConvertido < 0){
+                console.log("Sos negativo")
+            }else if(numeroConvertido == 0){
+                console.log("No tenes signo")
+            }else if(0 < numeroConvertido){
+                console.log("Sos positivo")
+            }
+        }else{
+            console.log("QUe te paso loco!!!😠")
+        }
+    </script>
+
+</body>
+</html>

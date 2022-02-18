@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ok{
+            color: green;
+            background-color: blanchedalmond;
+        }
+
+        .error{
+            color: red;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <p id="alert">Como me veo</p>
+    <script>
+        let elP = document.getElementById("alert")
+        let ingreso = prompt("Ingrese un numero positivo")
+        let ingresoConvertido = Number(ingreso)
+
+        if(ingresoConvertido > 0){
+            elP.innerHTML = "EL ingreso es correcto"
+            elP.classList.add("ok")
+        }else{
+            elP.innerHTML = "EL ingreso es incorrecto"
+            elP.classList.add("error")
+        }
+        
+        console.log(elP)
+    </script>
+</body>
+</html>
