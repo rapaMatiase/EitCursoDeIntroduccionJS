@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Yo quiero determinar si todos los valores de este array son mayores que 2.
+        let array = [5,5,3,4,5]
+
+
+        /* CAMINO POR EL QUE BUSCO UNO QUE NO CUMPLE */
+
+        let sonTodosMayoresQue2 = true //Suponer que todos cumplen hasta demostrar lo contrario.
+        for (let i = 0; i < array.length; i++) {
+            if(array[i]< 2){
+                sonTodosMayoresQue2 = false
+            }
+        }
+        console.log(sonTodosMayoresQue2)
+
+        /* CAMINO POR EL QUE COMPRUEBO QUE TODO CUMPLA */
+        let contador = 0
+        for(let i = 0; i < array.length ; i++){
+            if(array[i] > 2){
+                contador++
+            }
+        }
+        
+        if(contador == array.length){
+            console.log("Cumplen todos")
+        }else{
+            console.log("No cumplen todos")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Hacer la acumulacion de los valores del array.
+            1) Armar un for que permite recorrer el array
+            2) Hacer la sumatoria.
+            3min 10.36
+        
+         */
+        let array = [1,2,3,2,3,2,22,2,12,332,24]
+        let acumulador = 0
+        //1
+        for (let i = 0; i < array.length; i++) {
+            acumulador += array[i]
+            //acumulador += array[i] EQUIVALE A acumulador = acumulador + array[i]
+        }
+        console.log(acumulador)
+
+    </script>
+</body>
+</html>

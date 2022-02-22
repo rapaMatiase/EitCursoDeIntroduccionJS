@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Declarar un arreglo con [] 
+        let array = [12, 44, "hola", true, false, "chau"]
+
+        console.log(array)
+
+        //¿Como hago para acceder a una posicion en particular?
+        console.log(array[2])
+        //Si intento mostrar una posicion que no existe?
+        //Me devuelve undefined
+        console.log(array[22])
+        
+        //RELACION -> 
+        //LA ULTIMA POSICION DEL ARRAY = LARGO DEL ARRAY - 1
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i])
+        }
+
+        //Guardar valores nuevos en el arrayy
+        array[2] = "NUEVO VALOR"
+        console.log(array)
+        //CUIDADO - Abajo remplazaste el array por un string. 
+        array = "TODO MAL"
+    </script>
+</body>
+</html>

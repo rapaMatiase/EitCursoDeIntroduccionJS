@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let array = [2,3,4,-2,3,2]
+        /* Son todos numeros positivos? */
+        /* 2min 11.03 */
+
+        let bandera = true //Supongo que todos son positivos, voy buscar si alguno no cumple
+
+        for (let i = 0; i < array.length; i++) {
+            if(array[i] < 0){
+                bandera = false //Encontre uno que cumple.
+            }
+        }
+        console.log(bandera)
+    </script>
+</body>
+</html>
