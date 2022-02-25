@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Una matrix es un array de arrays. Donde le primer array contiene las filas, y los segundos contiene las celedas de cada columna. */
+        let matrix = [
+            [1,2,3],
+            [4,5,6,8],
+            [7,8,9]
+        ]
+
+        console.log(matrix)
+
+        console.table(matrix)
+
+        //¿Como recorremos una matrix?
+
+        for(let i = 0 ; i < matrix.length ; i++){//FILAS
+            for(let j = 0 ; j < matrix[i].length ; j++){//COLUMNAS
+                //matrix[FILA][COLUMNA]
+                console.log(matrix[i][j])
+            }
+        }
+
+    </script>
+</body>
+</html>

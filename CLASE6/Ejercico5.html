@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    /* 
+    El objetivo de este problema es determinar si cada fila de la matrix esta compuesta por numeros distintos.
+     */
+    let matrix = [
+            [1,2,3],
+            [5,2,6],
+            [7,8,9]
+        ]
+
+    let array = [1,2,3]
+    //Paso 1
+    //Armar un if tal que muestre el mensaje "Son distinto" si todos los elementos del array lo son. Si no un mensaje diciendo que hay repetidos. 2min 10.58
+    if(array[0] == array[1] || array[0] == array[2] || array[1] == array[2]){
+        console.log("Hay repetidos")
+    }else{
+        console.log("Son distintos")
+    }
+
+    //PASO2
+    //Dada la matrix, crear un For que la recorra y muestre por pantalla cada fila por separado. 1min 11.02
+    for(let i = 0 ; i < matrix.length ; i++){
+        console.log(matrix[i])
+    }
+    
+
+    //PASO 3
+    //Modificar el if para que controle si la primera fila de la matrix cumple o no con tener todos los elementos distintos. 2min 11.07
+    //Para la fila 1 de la matrix
+    if(matrix[0][0] == matrix[0][1] || matrix[0][0] == matrix[0][2] || matrix[0][1] == matrix[0][2]){
+        console.log("Hay repetidos")
+    }else{
+        console.log("Son distintos")
+    }
+
+    //Para la fila 2 de la matrix
+    // if(matrix[1][0] == matrix[1][1] || matrix[1][0] == matrix[1][2] || matrix[1][1] == matrix[2][2]){
+    //     console.log("Hay repetidos")
+    // }else{
+    //     console.log("Son distintos")
+    // }
+
+    /* ¿Que valor es el que esta cambiando en la condicion de cada cada if? El valor de la fila */
+
+    //PASO 4
+    //Combinar el PASO 3 y 2 para mostrar un resultado por cada fila.
+    // for(let i = 0 ; i < matrix.length ; i++){
+    //     if(matrix[i][0] == matrix[i][1] || matrix[i][0] == matrix[i][2] || matrix[i][1] == matrix[i][2]){
+    //         console.log("Hay repetidos")
+    //     }else{
+    //         console.log("Son distintos")
+    //     }
+    // }
+
+    //Hasta aca tengo una conlusion o resultado por fila, pero tal vez yo quiero un resultado por la matrix. No quiero saber si una fila contiene o no valores repitidos o no. Solo quiero saber si toda la matrix cumple o no.
+    
+    let bandera = true //Supongo que no hay repetidos
+    for(let i = 0 ; i < matrix.length ; i++){
+        if(matrix[i][0] == matrix[i][1] || matrix[i][0] == matrix[i][2] || matrix[i][1] == matrix[i][2]){
+            bandera = false
+        }
+    }
+    console.log(bandera)    
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* Dada una array, acumular todos sus valores.
+        let array = [1,2,3,4]
+
+        Resutlado tiene que ser
+        1+2+3+4 = 10
+        
+        1) Aramar un for que recorre el array e imprime en pantalla cada elementos por separado. 2min 10.35AM
+        2) Declarar antes del for una variable para acumular los valores en el array, y en vez de mostrar cada posicion en pantalla, sumarlo a esta variable. 
+        3) Imprimir el reusltado.
+        2min 10.39am
+         */
+
+        // PASO 1
+        // let array = [1, 2, 3, 4]
+        // for (let i = 0; i < array.length; i++) {
+        //     console.log(array[i])
+        // }
+
+        //PASO 2 y 3
+        let array = [1, 2, 3, 4]
+        let sumatoria = 0
+        for (let i = 0; i < array.length; i++) {
+            sumatoria += array[i]
+        }
+        console.log(sumatoria)
+    </script>
+</body>
+
+</html>

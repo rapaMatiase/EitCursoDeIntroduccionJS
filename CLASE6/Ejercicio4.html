@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        Dada una matrix hacer la sumatoria de todos sus elementos.
+
+        let matrix = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+
+        Resultado es 
+        45
+         */
+
+        let matrix = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+        
+
+        // PASO 1
+        // Armar un for que imprima en pantalla cada fila por serapado de la matrix. 1min 10.43 
+        // for(let i = 0 ; i < matrix.length ; i++){
+        //     console.log(matrix[i])
+        // }
+        
+        //PASO 2
+        //Anidar dentro del for del PASO 1 un segundo for que recorra las columnas de cada fila, tal que ahora imprima en pantalla cada elemetno de la matrix por separado. 2min 10.47am
+        // for(let i = 0 ; i < matrix.length ; i++){
+        //     for(let j = 0 ; j < matrix[i].length ; j++){
+        //         //matrix[FILA][COLUMNA]
+        //         console.log(matrix[i][j])
+        //     }
+        // }
+        
+        //PASO 3
+        //Hacer la sumatoria. Delcarar una variable para la sumatoria fuera de los FOR y remplazar el console.log por sumatroria mas el valor en la matrix en la posicion ixj. Mostrar el resultado por consola. 1min
+        let sumatoria = 0
+        for(let i = 0 ; i < matrix.length ; i++){
+            for(let j = 0 ; j < matrix[i].length ; j++){
+                //matrix[FILA][COLUMNA]
+                sumatoria += matrix[i][j]
+            }
+        }
+        console.log(sumatoria)
+    </script>
+
+</body>
+</html>

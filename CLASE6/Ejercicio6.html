@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let matrix = [
+            [1,2,3],
+            [1,2,6],
+            [7,8,9]
+        ]
+
+    //PASO 1
+    //Crear una IF (nada FOR) tal que me indique si la primera columna de la matrix esta formada solo por elementos distintos. Osea, no hay repetidos. 2min 11.30
+    if(matrix[0][0] == matrix[1][0] || matrix[0][0] == matrix[2][0] || matrix[1][0] == matrix[2][0]){
+        console.log("Hay repetidos")
+    }else{
+        console.log("Son todos distinos")
+    }
+
+    //PASO 2
+    //Crear un console log que muestre en panlatalla la columna 0.
+    //console.log(`${matrix[0][0]} ${matrix[1][0]} ${matrix[2][0]}`)
+
+    //PASO 3
+    //Crear un for que muestre las columnas de izquerda a derecha utilizando ese console log del paso 2. 2min 11.38
+    for(let j = 0 ; j < matrix.length ; j++){
+        console.log(`${matrix[0][j]} ${matrix[1][j]} ${matrix[2][j]}`)
+    }
+
+    /* Este codigo solo funcioan para matrices que tengan la misma cantidad de filas que columnas. Osea que sea cuadreada la matrix. */
+
+    //PASO 4
+    //Anidar el IF del paso 1 en el FOR del paso 3. 2min 11.42
+    for(let j = 0 ; j < matrix.length ; j++){
+        if(matrix[0][j] == matrix[1][j] || matrix[0][j] == matrix[2][j] || matrix[1][j] == matrix[2][j]){
+            console.log("Hay repetidos")
+        }else{
+            console.log("Son todos distinos")
+        }
+    }
+
+    //Paso 5
+    // Aplicar el concepto de bandera al resultado del paso 4 para que devulva true si no hay repetidos, false si llega a ver uno.2min 11.46
+
+    let bandera = true
+    for(let j = 0 ; j < matrix.length ; j++){
+        if(matrix[0][j] == matrix[1][j] || matrix[0][j] == matrix[2][j] || matrix[1][j] == matrix[2][j]){
+            bandera = false
+        }
+    }
+    console.log(bandera)
+
+    </script>
+</body>
+</html>

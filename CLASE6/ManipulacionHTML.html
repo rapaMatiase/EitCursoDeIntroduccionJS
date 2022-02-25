@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="primero">Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>Texto</p>
+    <section>
+        <p onclick="alert('gola')">Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+    
+    </section>
+    <script>
+        let elP1 = document.getElementById("primero")
+        console.log(elP1)
+        /* Si quisiera seleccionar todos los elementos P con un getElementById tendria que agregarle a cada uno un atributo ID unico en toda la pag y luego escribir 20 veces la linea de let elP = docuemnt.getElementById("...") */
+
+        let arrayElP = document.querySelectorAll("p")
+        console.log(arrayElP)
+
+        let arrayElPInsideSection = document.querySelectorAll("section p")
+        console.log(arrayElPInsideSection)
+
+        for(let i = 0 ; i < arrayElPInsideSection.length ; i++){
+            arrayElPInsideSection[i].style.color = "red"
+        }
+    </script>
+</body>
+</html>
