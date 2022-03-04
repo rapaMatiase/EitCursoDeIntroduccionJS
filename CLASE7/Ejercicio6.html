@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="inputNumero1">
+    <input type="text" id="inputNumero2">
+    <button id="btn"> Sumar</button>
+
+    <script>
+        /* Crear una funcion relacionada por un evento click al boton, que;
+        1) Obtenga el valor del input "inputNumero1"
+        2) Conveirta el valor obtenido en el paso anterior a numero
+        3) repetir para el input "inputNumero2"
+        4) Mostrar en un alert el resutlado de la suma de estos dos ingresos. 
+        3 min 11.43
+        */
+        let elBtn = document.getElementById("btn")
+        elBtn.addEventListener("click", function(){
+            //1
+            let inputIngreso1 = document.getElementById("inputNumero1")
+            let valorIngresado1 = inputIngreso1.value 
+            //2
+            let valorConvertido1 = Number(valorIngresado1)
+            //3
+            let inputIngreso2 = document.getElementById("inputNumero2")
+            let valorIngresado2 = inputIngreso2.value 
+            let valorConvertido2 = Number(valorIngresado2)
+            //4
+            let suma = valorConvertido1 + valorConvertido2
+            alert(suma)
+        })
+    </script>
+</body>
+</html>

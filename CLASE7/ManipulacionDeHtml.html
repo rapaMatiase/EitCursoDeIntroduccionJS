@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1)Por atributo -->
+    <button onclick="saludar()" > Click me</button>
+    <!-- 2) Por un addEvent Listener -->
+    <button id="btn" > Click me</button>
+
+    <script>
+        //Existe dos formas de relacionar una funcion con un evento en un elemento de html
+        function saludar(){
+            alert("Hola")
+        }
+
+        //2) Por un addEventListener
+        let elBtn = document.getElementById("btn")
+        elBtn.addEventListener("click", function(){
+            saludar()
+        })
+    </script>
+</body>
+</html>

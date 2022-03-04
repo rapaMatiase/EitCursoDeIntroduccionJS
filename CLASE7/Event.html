@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body" style="height: 100%;">
+    <div id="div" style="height: 100px; width: 100px; border: solid black 2px;"></div>
+    <label id="label"></label>
+    <script>
+
+    let elDiv = document.getElementById("div")
+
+    elDiv.addEventListener("mouseenter", function(event){
+        console.log("ENtraste")
+        let el = event.target
+        el.style.backgroundColor = "pink"
+    })
+
+    elDiv.addEventListener("mouseleave", function(event){
+        console.log("Saliste")
+        let el = event.target
+        el.style.backgroundColor = "green"
+    })
+
+    document.getElementById("body").addEventListener("mousemove", function(event){
+        console.log("Te moviste")
+        let x = event.offsetX
+        let y = event.offsetY
+        let elLabel = document.getElementById("label")
+        elLabel.innerHTML = `x:${x},y:${y}`
+    })
+
+
+
+    </script>
+</body>
+</html>

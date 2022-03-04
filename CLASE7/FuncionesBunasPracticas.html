@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        /* Habiendo pedido al usaurio ingresar un numero, vamos a determinar si es positivo o negativo. */
+
+        //OPCION 1 y La PEOR
+        function esPositivo(numero){
+            //Mala practica poner dos returns
+            if(0 <= numero ){
+                return true
+            }else{
+                return false
+            }
+        }
+
+        //OPCION 2 y NO TAN BUENA
+        function esPositivaVersion2(numero){
+            let bandera = false // Supongo que es negativo hasta que se demuestre lo contrario.
+            if(0 <= numero ){
+                bandera = true
+            }
+            return  bandera
+        }
+
+        //OPCION 3 E IDEAL
+        function esPositivoVersion3(numero){
+            //Mala practica poner dos returns
+            return (0 <= numero)
+        }
+
+        //1
+        let numeroIngresado = prompt("Ingrese un numero")
+        //2
+        let numeroConvertido = parseInt(numeroIngresado)
+        //3
+        if(esPositivo(numeroConvertido) === true){
+            console.log("Es positivo")
+        }else{
+            console.log("Negativo")
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+        Modificar para agregar una funcion que devuelve true o false si el numero es par o impar.
+
+        La funcion tiene que recibir el numero y devovler si es par o impar. 
+        3min 11.05
+         */
+
+        function esPar(numero) {
+            //Mala practica -> 2 returns
+            let resto = numero % 2
+            if (resto == 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        //1
+        let numeroIngresado = prompt("Ingrese un numero")
+        //2
+        let numeroConvertido = Number(numeroIngresado)
+        //3.1
+        if (esPar(numeroConvertido) === true) {
+            console.log("Es par")
+        } else {
+            console.log("Es impar")
+        }
+
+    </script>
+</body>
+
+</html>

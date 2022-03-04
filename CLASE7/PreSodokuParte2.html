@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+        Sodoku 3x3 para simplificar.
+        
+        Se gana cuadno no tengo repetidos en filas ni columnas.
+
+
+         */
+
+        //Filas
+        function hayRepetidosEnLasFilas(matrix) {
+            let bandera = true //Supongo que no hay repetidos
+            for (let i = 0; i < matrix.length; i++) {
+                if (matrix[i][0] == matrix[i][1] || matrix[i][0] == matrix[i][2] || matrix[i][1] == matrix[i][2]) {
+                    bandera = false
+                }
+            }
+            return bandera
+        }
+
+        //Columna
+        function hayRepetidosEnLasColumnas(matrix) {
+            let bandera = true
+            for (let j = 0; j < matrix.length; j++) {
+                if (matrix[0][j] == matrix[1][j] || matrix[0][j] == matrix[2][j] || matrix[1][j] == matrix[2][j]) {
+                    bandera = false
+                }
+            }
+            return bandera
+        }
+
+        let matrixP = [
+            [1,2,3],
+            [1,3,2],
+            [3,1,2]
+        ]
+    </script>
+</body>
+
+</html>

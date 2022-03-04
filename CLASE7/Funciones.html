@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Con argumento y con salida
+        function miPrimerFuncion(nombre) {
+            let mensaje = `Hola, soy ${nombre}`
+            return mensaje
+        }
+        //Con argumento y sin salida
+        function miSegundaFuncion(nombre){
+            let mensaje = `Hola, soy ${nombre}`
+            console.log(mensaje)
+            return
+            //No devuelve ningun valor
+        }
+
+        //Sin argumento y con salida
+        function miTercerFuncion(){
+            let nombre = prompt("Dame tu nombre")
+            let mensaje = `Hola, soy ${nombre}`
+            return mensaje
+        }
+
+        let resultado = miPrimerFuncion("Matias")
+        console.log(resultado)
+        //No igualo a ninguna variable porque no espero ningun valor de regreso
+        miSegundaFuncion("Fabian")
+        //No le paso ningun argumento
+        let otroResultado = miTercerFuncion()
+        console.log(otroResultado)
+    </script>
+</body>
+</html>
