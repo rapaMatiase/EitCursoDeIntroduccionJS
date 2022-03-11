@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            border : orange 2px solid;
+            font-size: 50px;
+        }
+
+        section{
+            height: 150px;
+            width: 150px;
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="casilla00"></div>
+        <div id="casilla01"></div>
+        <div id="casilla02"></div>
+        <div id="casilla10"></div>
+        <div id="casilla11"></div>
+        <div id="casilla12"></div>
+        <div id="casilla20"></div>
+        <div id="casilla21"></div>
+        <div id="casilla22"></div>
+    </section>
+    <label id="panel"></label>
+    <script src="Casilla.js"></script>
+    <script src="Observers.js"></script>
+    <script src="ModelView.js"></script>
+    <script src="Sodoku.js"></script>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

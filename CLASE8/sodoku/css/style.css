@@ -1,0 +1,13 @@
+section{
+    height: 100px;
+    width: 100px;
+    border: 2px solid orange;
+    font-size: 70px;
+    text-align: center;
+}
+article{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    height: 300px;
+    width: 300px;
+}

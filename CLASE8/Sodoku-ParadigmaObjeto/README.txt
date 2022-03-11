@@ -1,0 +1,1 @@
+Sodoku que armo en el curso de paradigma objetos. Es el mismo juego sodoku armado en javascript pero con el paradigma objeto en vez de el estructurado. Se aplica patron MVVM y Observer.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //Variables
+        let variable = "Soy un texto, o lo que vos quieras"
+
+        //Array o Arreglos
+        let array = [1,2,4,3]
+
+        //Objetos literales
+        let objeto = {
+            //Atributos
+            nombre : "Matias",
+            apellido : "Rapa",
+            email : "rapa.matias.e@gmail.com",
+            edad : 29,
+            //Metodo
+            presentate : function(){
+                console.log(`Hola soy ${this.apellido}, ${this.nombre}`)
+            },
+            /* Agregar un metodo que imprima en consola, "Hola soy jose y tengo 29 años" 2min 11.31 */
+            presentateConEdad : function(){
+                console.log(`Hola soy ${this.nombre} y tengo ${this.edad} años`)
+            }
+        }
+        //Como veo el valor dentro de un clave?
+        console.log(objeto.email)
+        //Como cambio el valor dentro de una clave?
+        objeto.nombre = "Jose"
+
+    </script>
+</body>
+</html>
