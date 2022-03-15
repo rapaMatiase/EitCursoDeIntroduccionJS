@@ -1,0 +1,12 @@
+article{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    height: 300px;
+    width: 300px;
+}
+
+section{
+    height: 100px;
+    width: 100px;
+    border: 1px solid green;
+}

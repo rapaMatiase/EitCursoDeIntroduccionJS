@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* SOBRE LAS ESTRUCTURAS CONDICIONALES */
+        let varaible = "a"
+        switch(varaible){
+            case "a":
+                //Segmento de codigo
+                console.log("AAAA")
+                break;
+            case 22:
+                console.log("2222")
+                break
+            default:
+                console.log("No macheo con nada")
+                break;
+        }
+
+        //El if de una linea
+        let turno = "X"
+        if( turno === "X"){
+            turno = "O"
+        }else{
+            turno = "X"
+        }
+        //Se puede simplificar en una sola linea
+        turno = turno === "X" ? "O" : "X" 
+        // condicion logica ? "Si es verdadero" : "Si es falso"
+
+    /* Funcione flecha */
+
+    function estaEsMiFuncion(parametro){
+        return `Hola ${parametro}`
+    }
+
+    //Relacionada al paradigma funcional
+    let funcionFlecha = (parametro) => {
+        return `Hola ${parametro}`
+    }
+
+    //Funciones flecha y array
+    let array = [1,2,3,12,4,32,124,12]
+
+    //ForEach es basicamente un FOR
+    array.forEach((element, index, array) => {
+        console.log(`el:${element}, index : ${index}, array: ${array}`)
+    })
+
+    //Quiero acumular los valores del array pero sin FOR
+    let acumulador = 0
+    array.forEach((element) => {
+        acumulador = acumulador + element
+    })
+    console.log(`El resultado del acumulador es : ${acumulador}`)
+
+
+    let arrayFiltrado = array.filter((element) =>{
+        return element > 20
+    })
+
+    //El mismo funcionamiento que filter pero con un FOR
+    let arrayAcumulador = []
+    for(let i = 0; i < array.length ; i++){
+        if(array[i] > 20){
+            arrayAcumulador.push(array[i])
+        }
+    }
+
+    console.log(arrayFiltrado)
+    </script>   
+</body>
+</html>
