@@ -1,0 +1,21 @@
+RELGAS SINTATICAS DE LAS VARIABLES DE JAVASCRIPT
+
+Como son reglas, no son optativas. 
+
+Las reglas condicionan los nombres de las variables;
+- No pueden llevar espacios. 
+- No pueden comenzar con numeros, pero si los puede contener en otro lugar. Por ejemplo "2nombre" no es valido, pero "n2ombre", "nombre2", "nomb3re" son validos.
+- No puede contener caracteres especiales, excepto el guion bajo "_".
+- No puede haber dos variables con el mismo nombre en un mismo contexto de ejecucion. 
+
+BUENAS PRACTICAS
+
+Son optativas, pero seria bueno aplicarlo.
+- Nomenclaturas; formas de escribir las variables con varias palabras.
+    * camelCase : Utilizar una mayuscula en la primera letra de cada palabra excepto en la primera palabra. Ejemplo; saldoDeCuentaCorrienteUsuarioFinal. [USAMOS ESTA]
+    * PascalCase : Utilizar una matuscula en la primera letra de cada palabra. Ejemplo SaldoDeCuentaCorrienteUsuarioFinal.
+    * keb-case : utilizar un guion medio entre cada palabra "-". Por ejemplo; saldo-cuanta-corriente.
+    * snake_case : utiliza un guion bajo entre cada palabra "_". Por ejemplo; saldo_cuenta_corriente.
+
+    
+- Los nombres de las variables tiene que ser DECLARATIVOS. Eso significa que el nombre deberia ser suficiente para enteneder el valor asociado al mismo. Por ejemplo "cc" no indica nada como nombre de variable, pero "cuentaCorrienteSaldo" me indica que un numero representando el saldo de un usuario. 
