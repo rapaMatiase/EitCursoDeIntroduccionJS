@@ -19,5 +19,32 @@ for(let i = 0; i < texto.length ; i++){
 }
 
 
+//REMPLAZO : remplazar todas las letras "a" por 🥭
 
+let remplazo = ""
+// "" es el elemento neutro para la concadenacion
+for(let i = 0; i < texto.length ; i++){
+    const letra = texto[i]
+    if(letra != "a"){
+        remplazo = `${remplazo}${letra}`
+    }else{
+        remplazo = `${remplazo}🥭`
+    }
+}
+console.log(remplazo)
+
+
+//AGREGAR : Agregar delante de todas las letras "a" un 🥭
+
+let agregar = ""
+// "" es el elemento neutro para la concadenacion
+for(let i = 0; i < texto.length ; i++){
+    const letra = texto[i]
+    if(letra != "a"){
+        agregar = `${agregar}${letra}`
+    }else{
+        agregar = `${agregar}🥭${letra}`
+    }
+}
+console.log(agregar)
 

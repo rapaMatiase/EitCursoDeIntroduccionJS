@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Lista de compras</h3>
+    <ul id="lista">
+        <li> Item 1</li>
+    </ul>
+    <script>
+        let array = [
+            "Tomate",
+            "Lechuga",
+            "cocacola",
+            "Tapa de asado",
+            "Pan"
+            ]
+
+        let elLista = document.getElementById("lista")
+        
+        let acumulador = ""
+
+        for(let i = 0 ; i < array.length ; i++){
+            const element = array[i]
+            acumulador = `${acumulador}<li>${element}</li>`
+        }
+
+        elLista.innerHTML = acumulador
+        
+    </script>
+</body>
+</html>
