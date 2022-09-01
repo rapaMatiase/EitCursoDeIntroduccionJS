@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <label for=""> Ingrese un valor</label>
+    <input type="text" id="valor">
+    <button id="btn"> CLICK ME</button>
+    <span id="error"></span>
+
+</body>
+</html>
+
+<script>
+
+    let elBtn = document.getElementById("btn")
+    let elInput = document.getElementById("valor")
+    let elSpanError = document.getElementById("error")
+    elBtn.addEventListener("click", function(){
+        let valorIngresado = elInput.value
+        let valorConvertido = Number(valorIngresado)
+        if(!isNaN(valorConvertido)){
+            if(valorConvertido % 2 === 0){
+                alert("Valor par")
+            }else{
+                alert("Valor inpar")
+            }
+        }else{
+            elSpanError.textContent = "Error eso no es un numero!!"
+        }
+    })
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- https://www.w3schools.com/jsref/dom_obj_event.asp -->
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div   id="myDiv"></div>
+    <script>
+
+        let elMyDiv = document.getElementById("myDiv")
+        console.log(elMyDiv)
+
+        // elMyDiv.addEventListener("EL EVENTO A CONTROLAR",  FUNCION A EJECUATAR)
+        elMyDiv.addEventListener("click", function(event){
+            /* El paramero EVENT TRAE DATOS SOBRE LO QUE OCURRIO EL ELEMENTO, POR EJEMPLO EL ELEMENTO SOBRE EL CUAL SE HIZO CLICK */
+            //Elemento que se hizo click
+            let target = event.target
+            target.style.backgroundColor = "yellow"
+        })
+
+        elMyDiv.addEventListener("mouseenter", function(event){
+            let target = event.target
+            target.style.backgroundColor = "pink"
+        })
+
+        elMyDiv.addEventListener("mouseleave", function(event){
+            let target = event.target
+            target.style.backgroundColor = "orange"
+        })
+
+        elMyDiv.addEventListener("mousemove", function(event){
+            let target = event.target
+            target.style.backgroundColor = "green"
+        })
+
+        /* EJEMPLO DE CONFLICTO: mousemove y mouseenter se pelean, gana mousemove porque se ejecuta mas veces que el otro. Cada vez que se mueve el mouse. */
+    </script>
+</body>
+</html>

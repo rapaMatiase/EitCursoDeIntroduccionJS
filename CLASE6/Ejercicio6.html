@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Realizar un programa que imaginando que la pantalla esta divida en cuatro partes iguales; dos arriba y dos abajo, pase lo siguiente;
+
+        - Si esta en la parte superior izquierda, el fondo de pantalla sea verde.
+        - Si esta en la parte superior derecha, el fonde de pantalla sea de azul.
+        - Si esta en la parte inferor izquierda, el fondo de pantalla sea rojo
+        - Si esta en la parte inferior derecha, el fondo de pantala sea naranja.
+
+        NOTA; Se puede utilizar las funciones window.innerHeight u window.innerWidht para obtener el largo y ancho de la pantalla.
+
+        NOTA: Se cambia el color de la pantalla con doceumtne.body.styel.backgroundColor al igual que cualquier elemento mas. 
+
+        5min 10.45
+        */
+
+        window.addEventListener("mousemove", function(event){
+            let x = event.clientX
+            let y = event.clientY
+            
+            let anchoPantalla = window.innerWidth
+            let alturaPantalla = window.innerHeight
+
+            let mitadAnchoPantalla = anchoPantalla / 2
+            let mitadAlturaPantalla = alturaPantalla / 2
+
+            if(x < mitadAnchoPantalla && y < mitadAlturaPantalla){
+                //PARTE SUPERIRO IZQUIERDA -> VERDE
+                document.body.style.backgroundColor = "green"
+            }else if( mitadAnchoPantalla < x && y < mitadAlturaPantalla){
+                //PARTE SUPERIRO DERECHA -> AZUL
+                document.body.style.backgroundColor = "blue"
+            }else if(x < mitadAnchoPantalla && mitadAlturaPantalla < y){
+                //PARTE INFERIOR IZQUIERDA -> ROJO
+                document.body.style.backgroundColor = "red"
+            }else if(mitadAnchoPantalla < x && mitadAlturaPantalla < y){
+                //PARTE INFERIOR DERECHA -> NARANJA
+                document.body.style.backgroundColor = "orange"
+            } 
+            
+        })
+
+    </script>
+</body>
+</html>
