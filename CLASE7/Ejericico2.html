@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* Realizar un programa que cree e inserte en el body 9 divs. Utilizar un FOR y DOCUMENT.CRETEELEMENT, pero agregue acada div dos atributos, uno llamdado data-x y otro data-y, con lso valores respectivos a una matris de 3x3
+        EJEMPLO
+        div00 div01 div02
+        div10 div11 div12
+        div20 div21 div22
+
+        CONSEJO: Primero lograr que dos for anidados muestren los 9 pares de numeros y despues creo el elemento de HTML. 
+        4min 11.37 */
+
+        for(let i = 0 ; i < 3 ; i++){
+            for(let j = 0 ; j < 3 ; j++){
+                console.log(`i:${i},j:${j}`)
+                let nuevoElemento = document.createElement("div")
+                nuevoElemento.setAttribute("data-x", i)
+                nuevoElemento.setAttribute("data-y", j)
+                document.body.appendChild(nuevoElemento)
+            }
+        }
+    </script>
+</body>
+</html>

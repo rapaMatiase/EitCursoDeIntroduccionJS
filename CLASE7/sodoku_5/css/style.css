@@ -1,0 +1,12 @@
+#sodoku{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    height: 200px;
+    width: 200px;
+}
+
+#sodoku div{
+    border: 2px solid orange;
+    text-align: center;
+    font-size: 60px;
+}

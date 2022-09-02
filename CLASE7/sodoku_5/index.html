@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="sodoku">
+        <div data-x="0" data-y="0"></div>
+        <div data-x="0" data-y="1"></div>
+        <div data-x="0" data-y="2"></div>
+        <div data-x="1" data-y="0"></div>
+        <div data-x="1" data-y="1"></div>
+        <div data-x="1" data-y="2"></div>
+        <div data-x="2" data-y="0"></div>
+        <div data-x="2" data-y="1"></div>
+        <div data-x="2" data-y="2"></div>
+    </div>
+    <span id="ganador"></span>
+    <button id="reinicio"> Reiniciar</button>
+    <script src="js/main.js"></script>
+    <script src="js/validadores.js"></script>
+    <script src="js/reinicio.js"></script>
+
+    <script>
+
+
+        //#sodoku div EQUIVALE todos los div dentro de un elemento con id sodoku
+        let elSquarts = document.querySelectorAll("#sodoku div")
+
+        for(let i = 0 ; i < elSquarts.length ; i++){
+            const element = elSquarts[i]
+            element.addEventListener("click", function(event){
+                //Obtengo el elemento sobre el que se hizo click
+                let target = event.target
+                //Obtengo las posiciones del elemento
+                let i = target.getAttribute("data-x")
+                let j = target.getAttribute("data-y")
+                //Juego
+                let estado = comenzarJugar(i, j)
+                //Reflejo el estado en el html
+                target.textContent = estado
+            })
+        }
+        
+
+        /* Crear un boton que permita reiniciar el juego. 4min 11.10
+        - Crear un boton en la interfaz grafica
+        - Agregar el eventLiting para click
+        - Ejecute la funcion de reinicio ya creda.
+        - Agregar cualquier otra cosa que haga falta para lograr que el juego vuelva a comenzar.
+        */
+
+        document.getElementById("reinicio").addEventListener("click", function(){
+            reinicioDeJuego()
+        })
+    </script>
+</body>
+</html>
