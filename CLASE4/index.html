@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto1">hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <div class="section-art">
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+     
+    </div>
+    <p>hola</p>
+    <p>hola</p>
+    <div class="section-art">
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+     
+    </div>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <p>hola</p>
+    <div class="section-art">
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+     
+    </div>
+    <script>
+        let elTexto1 = document.getElementById("texto1")
+        console.log(elTexto1)
+
+        //MUCHO MEJOR
+        let elTextos = document.querySelectorAll("p")
+        console.log(elTextos)
+
+        for(let i = 0; i < elTextos.length ; i++){
+            const element = elTextos[i]
+            element.style.backgroundColor = "Red"
+        }
+
+        //MUCHO MEJOR
+        let elTextos2 = document.querySelectorAll(".section-art p")
+        console.log(elTextos2)
+
+        for(let i = 0; i < elTextos2.length ; i++){
+            const element = elTextos2[i]
+            element.style.backgroundColor = "blue"
+        }
+    </script>
+</body>
+</html>
