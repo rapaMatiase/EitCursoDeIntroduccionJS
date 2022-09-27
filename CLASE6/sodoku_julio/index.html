@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            font-size: 90px;
+        }
+
+        section div{
+            border: solid orange 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div id="casilla00"></div>
+        <div> </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <script>
+        //let elDivCasilla00 = document.getElementById("casilla00")
+        let matrisSodoku = [
+                            [1,2,2],
+                            [2,3,3],
+                            [3,3,1]
+                        ]
+
+        let elDivListaDeCasillas = document.querySelectorAll(" section div ")
+        
+        let contador = 0
+        for(let i = 0 ; i < 3; i++){
+            for(let j = 0; j < 3 ; j++){
+                elDivListaDeCasillas[contador].setAttribute("data-i", i)
+                elDivListaDeCasillas[contador].setAttribute("data-j", j)
+                elDivListaDeCasillas[contador].innerHTML = matrisSodoku[i][j]
+                elDivListaDeCasillas[contador].addEventListener("click", function(event){
+                console.log("pase por aca")
+                let target = event.target
+                let i = target.getAttribute("data-i")
+                let j = target.getAttribute("data-j")
+
+                let resutlado = play(i, j)
+                target.innerHTML = resutlado
+            })
+                contador++
+            }
+        }
+
+
+
+      
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

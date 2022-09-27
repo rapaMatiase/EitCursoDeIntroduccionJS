@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            font-size: 90px;
+        }
+
+        section div{
+            border: solid orange 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div data-i="0" data-j="0" id="casilla00"></div>
+        <div data-i="0" data-j="1"></div>
+        <div data-i="0" data-j="2"></div>
+        <div data-i="1" data-j="0"></div>
+        <div data-i="1" data-j="1"></div>
+        <div data-i="1" data-j="2"></div>
+        <div data-i="2" data-j="0"></div>
+        <div data-i="2" data-j="1"></div>
+        <div data-i="2" data-j="2"></div>
+    </section>
+
+    <script>
+        //let elDivCasilla00 = document.getElementById("casilla00")
+
+        let elDivListaDeCasillas = document.querySelectorAll(" section div ")
+        console.log(elDivListaDeCasillas)
+
+        for(let i = 0 ; i < elDivListaDeCasillas.length ; i++){
+            elDivListaDeCasillas[i].addEventListener("click", function(event){
+                console.log("pase por aca")
+                let target = event.target
+                let i = target.getAttribute("data-i")
+                let j = target.getAttribute("data-j")
+
+                let resutlado = play(i, j)
+                target.innerHTML = resutlado
+            })
+        }
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
